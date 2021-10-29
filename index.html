@@ -129,7 +129,7 @@
             <!--* END ROW 1 -->
 
             <!--* START ROW 2 -->
-            <div class="row mt-5">
+            <div class="row mt-5 justify-content-between">
                 <!-- ----------------------------------------------- START RECTANGLE ----------------------------------------------- -->
                 <div class="col-md-5 box-container">
                     <!--* HEADING RECTANGLE -->
@@ -146,7 +146,7 @@
                             <p class="font-weight-bold">Rumus Persegi Panjang</p>
                             <p>Luas = P x L</p>
                             <p>Keliling = (2 x P) + (2 x L)</p>
-                            <img src="assets/img/Persegi.png" alt="square" class="img-fluid my-3">
+                            <img src="assets/img/Persegi_Panjang.png" alt="square" class="img-fluid my-3">
                         </div>
 
                         <div class="col-lg-5 p-2">
@@ -171,6 +171,56 @@
                 </div>
                 <!-- ------------------------------------------------ END RECTANGLE ------------------------------------------------ -->
 
+                <!-- ----------------------------------------------- START TRIANGLE ------------------------------------------------ -->
+                <div class="col-md-5 box-container">
+                    <!--* HEADING TRIANGLE -->
+                    <div class="row">
+                        <div class="col-md-12 py-2">
+                            <h3 class="c-purple">Segitiga</h3>
+                        </div>
+                    </div>
+                    <!--* END HEADING TRIANGLE -->
+
+                    <!--* FORMULA, INPUT USER, IMAGE FORM TRIANGLE -->
+                    <div class="row justify-content-between">
+                        <div class="col-lg-6 border border-danger rounded align-self-start">
+                            <p class="font-weight-bold">Rumus Segitiga</p>
+                            <p>Luas = <sup>1</sup>/<sub>2</sub> x a x t </p>
+                            <p>Keliling = a + b + c</p>
+                            <img src="assets/img/Segitiga.png" alt="triangle" class="img-fluid my-3">
+                        </div>
+
+                        <div class="col-lg-5 p-2">
+                            <div class="form-group triangle">
+                                <label for="triangle-base">Masukkan Alasnya (a)</label>
+                                <input class="form-control mr-3" type="number" name="triangle-base" id="triangle-base"
+                                    value="0" min="0">
+
+                                <label for="triangle-height">Masukkan Tingginya (t)</label>
+                                <input class="form-control mb-4" type="number" name="triangle-height"
+                                    id="triangle-height" value="0" min="0">
+
+                                <label for="triangle-side-b">Masukkan Sisi (b)</label>
+                                <input class="form-control mb-4" type="number" name="triangle-side-b"
+                                    id="triangle-side-b" value="0" min="0">
+
+                                <label for="triangle-side-c">Masukkan Sisi (c)</label>
+                                <input class="form-control mb-4" type="number" name="triangle-side-c"
+                                    id="triangle-side-c" value="0" min="0">
+
+                                <button class="btn bc-purple text-light triangle">Hitung</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--* END FORMULA, INPUT USER, IMAGE FORM TRIANGLE -->
+
+                    <div class="row mt-4">
+                        <div class="col-md-12 explaination-triangle">
+
+                        </div>
+                    </div>
+                </div>
+                <!-- ------------------------------------------------ END TRIANGLE ------------------------------------------------- -->
 
             </div>
         </div>

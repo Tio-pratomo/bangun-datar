@@ -1,6 +1,8 @@
-/* -------------------------------------------- * VARIABLE AT SCOPE GLOBAL -------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------------------ */
+/*                                              VARIABLE AT SCOPE GLOBAL                                              */
+/* ------------------------------------------------------------------------------------------------------------------ */
 
-/* ------------------------------------------------ * CIRCLE SECTION ----------------------------------------------- */
+/* ------------------------------------------------ CIRCLE SECTION ----------------------------------------------- */
 //* EXPLAINATION CIRCLE SECTION
 const listGroupCircle = /* html */ `
 <ul class="list-group list-group-flush">
@@ -76,10 +78,43 @@ const inputRectangleHeight = document.querySelector(
 
 /* ---------------------------------------------- END RECTANGLE SECTION --------------------------------------------- */
 
+/* --------------------------------------------- START TRIANGLE SECTION --------------------------------------------- */
+//* EXPLAINATION FOR TRIANGLE
+const listGroupTriangle = /* html */ `
+<ul class="list-group list-group-flush">
+    <li class="list-group-item">
+        Luas = 1/2 x <span class="triangle-base"></span> x <span class="triangle-height"></span>
+    </li>
+    <li class="list-group-item">
+        Luas = 1/2 x <span class="triangle-sum-at"></span> = <span class="triangle-area"></span>
+    </li>
+    <li class="list-group-item">
+        Keliling = <span class="triangle-base"></span> x <span class="triangle-b"></span> x <span class="triangle-c"></span>
+    </li>
+    <li class="list-group-item">
+        Keliling = <span class="perimeter-of-triangle"></span>
+    </li>
+</ul>
+`;
+
+//* EXPLAINATION TRIANGLE SECTION
+const explainationTriangle = document.querySelector('.explaination-triangle');
+
+//* SELECT INPUT OF TRIANGLE
+const inputOfTriangle = [
+    ...document.querySelectorAll('.form-group.triangle input'),
+];
+
+/* ---------------------------------------------- END TRIANGLE SECTION ---------------------------------------------- */
+
 /* ------------------------------------------------ SELECT ALL BUTTON ----------------------------------------------- */
 const buttons = [...document.querySelectorAll('button')];
 
-/* ------------------------------------------ END VARIABLE AT SCOPE GLOBAL ------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------------ */
+/*                                            END VARIABLE AT SCOPE GLOBAL                                            */
+/* ------------------------------------------------------------------------------------------------------------------ */
+
+/* --------------------------------------- CALCULATE IF BUTTON CLICKED BY USER -------------------------------------- */
 buttons.forEach((button) => {
     button.addEventListener('click', function (event) {
         /* ------------------------------------------------ CIRCLE CALCULATE ------------------------------------------------ */
@@ -218,6 +253,51 @@ buttons.forEach((button) => {
             perimeterOfRectangle.innerHTML =
                 parseInt(sumRectangleWidth.innerHTML) +
                 parseInt(sumRectangleHeight.innerHTML);
+        }
+
+        /* ----------------------------------------------- TRIANGLE CALCULATE ----------------------------------------------- */
+        if (event.target.classList.contains('triangle')) {
+            inputOfTriangle.forEach((input) => {
+                if (input.value < 0) {
+                    input.value = 0;
+                }
+            });
+
+            explainationTriangle.innerHTML = listGroupTriangle;
+
+            const spanTriangleBase = [
+                ...document.querySelectorAll('span.triangle-base'),
+            ];
+
+            const spanTriangleHeight = document.querySelector(
+                'span.triangle-height'
+            );
+            const spanTriangleSumAt = document.querySelector(
+                'span.triangle-sum-at'
+            );
+            const spanTriangleArea =
+                document.querySelector('span.triangle-area');
+
+            const spanTriangleB = document.querySelector('span.triangle-b');
+
+            const spanTriangleC = document.querySelector('span.triangle-c');
+
+            const spanPerimeterOfTriangle = document.querySelector(
+                'span.perimeter-of-triangle'
+            );
+
+            spanTriangleBase.forEach((spanTB) => {
+                spanTB.innerHTML = inputOfTriangle[0].value;
+            });
+
+            spanTriangleHeight.innerHTML = inputOfTriangle[1].value;
+
+            spanTriangleSumAt.innerHTML =
+                parseInt(spanTriangleBase[0].innerHTML) *
+                parseInt(spanTriangleHeight.innerHTML);
+
+            spanTriangleArea.innerHTML =
+                (1 * parseInt(spanTriangleSumAt.innerHTML)) / 2;
         }
     });
 });
