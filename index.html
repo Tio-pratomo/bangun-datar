@@ -14,10 +14,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-    rel="stylesheet">
+
 
     <!-- ------------------------------------------------ link own css ------------------------------------------------- -->
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
 
@@ -43,7 +43,7 @@
     <main>
         <div class="container">
 
-            <!--* START ROW 1 -->
+            <!-- ------------------------------------------------- START ROW 1 ------------------------------------------------- -->
             <div class="row justify-content-between">
                 <!-- ----------------------------------------------- CIRCLE SECTION ------------------------------------------------ -->
                 <div class="col-md-5 box-container">
@@ -126,9 +126,9 @@
                 </div>
                 <!-- ------------------------------------------------- END SQUARE -------------------------------------------------- -->
             </div>
-            <!--* END ROW 1 -->
+            <!-- -------------------------------------------------- END ROW 1 -------------------------------------------------- -->
 
-            <!--* START ROW 2 -->
+            <!-- ------------------------------------------------ * START ROW 2 ------------------------------------------------ -->
             <div class="row mt-5 justify-content-between">
                 <!-- ----------------------------------------------- START RECTANGLE ----------------------------------------------- -->
                 <div class="col-md-5 box-container">
@@ -223,13 +223,68 @@
                 <!-- ------------------------------------------------ END TRIANGLE ------------------------------------------------- -->
 
             </div>
+            <!-- ------------------------------------------------- * END ROW 2 ------------------------------------------------- -->
+
+            <!-- ------------------------------------------- START ROW 3 ------------------------------------------- -->
+            <div class="row justify-content-between mt-5">
+                <!-- --------------------------------------- START TRAPEZOID --------------------------------------- -->
+                <div class="col-md-5 box-container">
+                    <!--* HEADING TRAPEZOID -->
+                    <div class="row">
+                        <div class="col-md-12 py-2">
+                            <h3 class="c-purple">Trapesium</h3>
+                        </div>
+                    </div>
+                    <!--* END HEADING TRAPEZOID -->
+
+                    <!--* FORMULA, INPUT USER, IMAGE FORM TRAPEZOID -->
+                    <div class="row justify-content-between">
+                        <div class="col-lg-6 border border-danger rounded align-self-start">
+                            <p class="font-weight-bold">Rumus Trapesium</p>
+                            <p>Luas = (a + b) * t ÷ 2</p>
+                            <p>Keliling = a + b + c + d</p>
+                            <p class="mt-3 font-weight-bold">catatan : d = t</p>
+                            <img src="assets/img/Trapesium.png" alt="trapesium" class="img-fluid my-3">
+                        </div>
+
+                        <div class="col-lg-5 p-2">
+                            <div class="form-group trapezoid">
+                                <label for="trapezoid-a">Masukkan Sisi Bawah (a)</label>
+                                <input class="form-control mr-3" type="number" name="trapezoid-a" id="trapezoid-a"
+                                    value="0" min="0">
+
+                                <label for="trapezoid-height">Masukkan Tingginya (t)</label>
+                                <input class="form-control mb-4" type="number" name="trapezoid-height"
+                                    id="trapezoid-height" value="0" min="0">
+
+                                <label for="trapezoid-side-b">Masukkan Sisi Atas (b)</label>
+                                <input class="form-control mb-4" type="number" name="trapezoid-side-b"
+                                    id="trapezoid-side-b" value="0" min="0">
+
+                                <label for="trapezoid-side-c">Masukkan Sisi Miring (c)</label>
+                                <input class="form-control mb-4" type="number" name="trapezoid-side-c"
+                                    id="trapezoid-side-c" value="0" min="0">
+
+                                <button class="btn bc-purple text-light trapezoid">Hitung</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--* END FORMULA, INPUT USER, IMAGE FORM TRAPEZOID -->
+
+                    <div class="row mt-4">
+                        <div class="col-md-12 explaination-trapezoid">
+
+                        </div>
+                    </div>
+                </div>
+                <!-- ---------------------------------------- END TRAPEZOID ---------------------------------------- -->
+            </div>
         </div>
-        <!--* END ROW 2 -->
 
     </main>
 
 
-    <!--* javascript -->
+    <!--* javascript bootstrap -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
         integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
@@ -239,7 +294,7 @@
     </script>
 
     <!--* my custom javascript -->
-    <script src="assets/script.js"></script>
+    <script type="module" src="assets/js/script.js"></script>
 </body>
 
 </html>
