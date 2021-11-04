@@ -10,7 +10,7 @@ p {
 .header {
     padding: 120px 0 30px;
     height: 50vh;
-    background-image: url(../assets/img/banner.jpg);
+    background-image: url(../img/banner.jpg);
     transform: skew(0deg, 4deg) translateY(-120px);
     -webkit-transform: skew(0deg, 4deg) translateY(-120px);
     -moz-transform: skew(0deg, 4deg) translateY(-120px);
@@ -27,7 +27,7 @@ main {
 }
 
 .box-container {
-    box-shadow: 5px 10px 10px rgba(52, 58, 64, 0.4);
+    box-shadow: 0 10px 30px -10px rgba(52, 58, 64, 0.6);
 }
 
 .border-danger {

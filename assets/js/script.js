@@ -1,118 +1,33 @@
-/* ------------------------------------------------------------------------------------------------------------------ */
-/*                                              VARIABLE AT SCOPE GLOBAL                                              */
-/* ------------------------------------------------------------------------------------------------------------------ */
-
-/* ------------------------------------------------ CIRCLE SECTION ----------------------------------------------- */
-//* EXPLAINATION CIRCLE SECTION
-const listGroupCircle = /* html */ `
-<ul class="list-group list-group-flush">
-    <li class="list-group-item">
-        Luas = <span class="phi"></span> x <span class="input-circle"></span><sup>2</sup>
-    </li>
-    <li class="list-group-item">
-        Luas = <span class="phi"></span> x <span class="input-circle"></span> x <span class="input-circle"></span> = <span
-            class="total-circle"></span>
-    </li>
-    <li class="list-group-item">
-        Keliling = 2 x <span class="phi"></span> x <span class="input-circle"></span> =
-        <span class="total-circle-k"></span>
-    </li>
-</ul>
-`;
-
-//* SELECT ELEMENT HAS CLASS EXPLAINATION CIRCLE
-const explainationCircle = document.querySelector('.explaination-circle');
-
-//* SELECTION ELEMENT INPUT CIRCLE
-const inputCircle = document.querySelector('input[name = "number-circle"]');
-/* ----------------------------------------------- END CIRCLE SECTION ----------------------------------------------- */
-
-/* ------------------------------------------------ SQUARE SECTION ----------------------------------------------- */
-//* EXPLAINATION Square SECTION
-const listGroupSquare = /* html */ `
-<ul class="list-group list-group-flush">
-    <li class="list-group-item">
-        Luas = <span class="lateral"></span> x <span class="lateral"></span> = <span class="square-area"></span>
-    </li>
-    <li class="list-group-item">
-        Keliling = <span class="lateral"></span> x 4 = <span class="perimeter-of-square"></span>
-    </li>
-</ul>
-`;
-
-//* SELECT ELEMENT HAS CLASS EXPLAINATION Square
-const explainationSquare = document.querySelector('.explaination-square');
-
-//* SELECT INPUT ELEMENT Square SECTION
-const inputSquare = document.querySelector('input[name = "number-square"]');
-
-/* ---------------------------------------------- END Square SECTION --------------------------------------------- */
-
-/* ------------------------------------------------ RECTANGLE SECTION ----------------------------------------------- */
-//* EXPLANIATION RECTANGLE SECTION
-const listGroupRectangle = /* html */ `
-<ul class="list-group list-group-flush">
-    <li class="list-group-item">
-        Luas = <span class="rectangle-width"></span> x <span class="rectangle-height"></span> = <span class="rectangle-area"></span>
-    </li>
-    <li class="list-group-item">
-        Keliling = ( 2 x <span class="rectangle-width"></span> ) + ( 2 x <span class="rectangle-height"></span> )
-    </li>
-    <li class="list-group-item">
-        Keliling = <span class="sum-rectangle-width"></span> + <span class="sum-rectangle-height"></span> = <span class="perimeter-of-rectangle"></span>
-    </li>
-</ul>
-`;
-
-//* SELECT ELEMENT HAS CLASS EXPLAINATION RECTANGLE
-const explainationRectangle = document.querySelector('.explaination-rectangle');
-
-//* SELECT INPUT ELEMENT RECTANGLE SECTION
-const inputRectangleWidth = document.querySelector(
-    'input[name = "number-width"]'
-);
-
-const inputRectangleHeight = document.querySelector(
-    'input[name = "number-height"]'
-);
-
-/* ---------------------------------------------- END RECTANGLE SECTION --------------------------------------------- */
-
-/* --------------------------------------------- START TRIANGLE SECTION --------------------------------------------- */
-//* EXPLAINATION FOR TRIANGLE
-const listGroupTriangle = /* html */ `
-<ul class="list-group list-group-flush">
-    <li class="list-group-item">
-        Luas = 1/2 x <span class="triangle-base"></span> x <span class="triangle-height"></span>
-    </li>
-    <li class="list-group-item">
-        Luas = 1/2 x <span class="triangle-sum-at"></span> = <span class="triangle-area"></span>
-    </li>
-    <li class="list-group-item">
-        Keliling = <span class="triangle-base"></span> x <span class="triangle-b"></span> x <span class="triangle-c"></span>
-    </li>
-    <li class="list-group-item">
-        Keliling = <span class="perimeter-of-triangle"></span>
-    </li>
-</ul>
-`;
-
-//* EXPLAINATION TRIANGLE SECTION
-const explainationTriangle = document.querySelector('.explaination-triangle');
-
-//* SELECT INPUT OF TRIANGLE
-const inputOfTriangle = [
-    ...document.querySelectorAll('.form-group.triangle input'),
-];
-
-/* ---------------------------------------------- END TRIANGLE SECTION ---------------------------------------------- */
-
 /* ------------------------------------------------ SELECT ALL BUTTON ----------------------------------------------- */
 const buttons = [...document.querySelectorAll('button')];
 
-/* ------------------------------------------------------------------------------------------------------------------ */
-/*                                            END VARIABLE AT SCOPE GLOBAL                                            */
-/* ------------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------- IMPORT FROM CIRCLE SECTION ------------------------------------------- */
+import { listGroupCircle, explainationCircle, inputCircle } from './circle.mjs';
+
+/* ------------------------------------------- IMPORT FROM SQUARE SECTION ------------------------------------------- */
+import { listGroupSquare, explainationSquare, inputSquare } from './square.mjs';
+
+/* ------------------------------------------ IMPORT FROM RECTANGLE SECTION ----------------------------------------- */
+import {
+    listGroupRectangle,
+    explainationRectangle,
+    inputRectangleWidth,
+    inputRectangleHeight,
+} from './rectangle.mjs';
+
+/* ---------------------------------------------- IMPORT FROM TRIANGLE ---------------------------------------------- */
+import {
+    listGroupTriangle,
+    explainationTriangle,
+    inputOfTriangle,
+} from './triangle.mjs';
+
+/* ---------------------------------------------- IMPORT FROM TRAPEZOID --------------------------------------------- */
+import {
+    listGroupTrapezoid,
+    explainationTrapezoid,
+    inputOfTrapezoid,
+} from './trapezoid.mjs';
 
 /* --------------------------------------- CALCULATE IF BUTTON CLICKED BY USER -------------------------------------- */
 buttons.forEach((button) => {
@@ -298,6 +213,82 @@ buttons.forEach((button) => {
 
             spanTriangleArea.innerHTML =
                 (1 * parseInt(spanTriangleSumAt.innerHTML)) / 2;
+
+            spanTriangleB.innerHTML = inputOfTriangle[2].value;
+            spanTriangleC.innerHTML = inputOfTriangle[3].value;
+
+            spanPerimeterOfTriangle.innerHTML =
+                parseInt(spanTriangleBase[1].innerHTML) +
+                parseInt(spanTriangleB.innerHTML) +
+                parseInt(spanTriangleC.innerHTML);
+        }
+
+        /* ------------------------------------------- TRAPEZOID CALCULATE ------------------------------------------ */
+        if (event.target.classList.contains('trapezoid')) {
+            //* if user input value under zero for all input tag
+            inputOfTrapezoid.forEach((input) => {
+                if (input.value < 0) {
+                    input.value = 0;
+                }
+            });
+
+            //* when user click button at trapezoid section, included explaination of trapezoid
+            explainationTrapezoid.innerHTML = listGroupTrapezoid;
+
+            //* SELECT ALL TAG SPAN CONTAIN class = "trapezoid-side-a"
+            const spanTrapezoidSideA = [
+                ...document.querySelectorAll('.trapezoid-side-a'),
+            ];
+
+            const spanTrapezoidSideB = [
+                ...document.querySelectorAll('.trapezoid-side-b'),
+            ];
+
+            const spanTrapezoidSideC =
+                document.querySelector('.trapezoid-side-c');
+
+            const spanTrapezoidHeight = [
+                ...document.querySelectorAll('.trapezoid-height'),
+            ];
+
+            const calculateTrapezoidA = document.querySelector(
+                '.calculate-trapezoid-a'
+            );
+
+            const trapezoidArea = document.querySelector('.trapezoid-area');
+
+            const perimeterOfTrapezoid = document.querySelector(
+                '.perimeter-of-trapezoid'
+            );
+
+            //* INSERT ALL TAG SPAN class="trapezoid-side-a" ACCORDING INPUT USER
+            spanTrapezoidSideA.forEach((sideA) => {
+                sideA.innerHTML = inputOfTrapezoid[0].value;
+            });
+
+            spanTrapezoidSideB.forEach((sideB) => {
+                sideB.innerHTML = inputOfTrapezoid[2].value;
+            });
+
+            spanTrapezoidSideC.innerHTML = inputOfTrapezoid[3].value;
+
+            spanTrapezoidHeight.forEach((spanHeight) => {
+                spanHeight.innerHTML = inputOfTrapezoid[1].value;
+            });
+
+            calculateTrapezoidA.innerHTML =
+                (parseInt(spanTrapezoidSideA[0].innerHTML) +
+                    parseInt(spanTrapezoidSideB[0].innerHTML)) *
+                parseInt(spanTrapezoidHeight[0].innerHTML);
+
+            trapezoidArea.innerHTML =
+                parseInt(calculateTrapezoidA.innerHTML) / 2;
+
+            perimeterOfTrapezoid.innerHTML =
+                parseInt(spanTrapezoidSideA[0].innerHTML) +
+                parseInt(spanTrapezoidSideB[0].innerHTML) +
+                parseInt(spanTrapezoidSideC.innerHTML) +
+                parseInt(spanTrapezoidHeight[0].innerHTML);
         }
     });
 });
