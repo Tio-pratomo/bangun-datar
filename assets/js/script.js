@@ -32,11 +32,21 @@ import {
 /* --------------------------------------- CALCULATE IF BUTTON CLICKED BY USER -------------------------------------- */
 buttons.forEach((button) => {
     button.addEventListener('click', function (event) {
+        //* VALIDATION WHEN BUTTON HAS CLICKED BY USER
+        const inputAllSection = [...document.querySelectorAll('input')];
+
+        inputAllSection.forEach((inUser) => {
+            // WHEN USER INSERT UNDER ZERO NUMBER
+            if (inUser.value < 0) {
+                inUser.value *= -1;
+            }
+        });
+
         /* ------------------------------------------------ CIRCLE CALCULATE ------------------------------------------------ */
         if (event.target.classList.contains('circle')) {
-            //* IF USER INPUT NUMBER < 0, CHANGE POSITIVE NUMBER
-            if (inputCircle.value < 0) {
-                inputCircle.value *= -1;
+            //* IF THE INPUT VALUE IS NOT ENTERED (EMPTY)
+            if (inputCircle.value === '') {
+                inputCircle.value = 0;
             }
 
             //* DISPLAY EXPLANATION CALCULATION OF CIRCLE
@@ -56,11 +66,6 @@ buttons.forEach((button) => {
             //* TOTAL CIRCUMFERENCE(KELILING) CIRCLE
             const spanTotalCircumferenceCircle =
                 document.querySelector('.total-circle-k');
-
-            //* IF THE INPUT VALUE IS NOT ENTERED (EMPTY)
-            if (inputCircle.value === '') {
-                inputCircle.value = 0;
-            }
 
             spanPhi.forEach((sPHI) => {
                 parseInt(inputCircle.value) % 7 === 0
@@ -95,8 +100,9 @@ buttons.forEach((button) => {
 
         /* ------------------------------------------------ SQUARE CALCULATE ------------------------------------------------ */
         if (event.target.classList.contains('square')) {
-            if (inputSquare.value < 0) {
-                inputSquare.value *= -1;
+            //* IF THE INPUT VALUE IS NOT ENTERED (EMPTY)
+            if (inputSquare.value === '') {
+                inputSquare.value = 0;
             }
 
             //* DISPLAY Square CALCULATION
@@ -124,12 +130,13 @@ buttons.forEach((button) => {
 
         /* ----------------------------------------------- RECTANGLE CALCULATE ---------------------------------------------- */
         if (event.target.classList.contains('rectangle')) {
-            if (inputRectangleWidth.value < 0) {
-                inputRectangleWidth.value *= -1;
+            //* IF THE INPUT VALUE IS NOT ENTERED (EMPTY)
+            if (inputRectangleWidth.value === '') {
+                inputRectangleWidth.value = 0;
             }
 
-            if (inputRectangleHeight.value < 0) {
-                inputRectangleHeight.value *= -1;
+            if (inputRectangleHeight.value === '') {
+                inputRectangleHeight.value = 0;
             }
 
             //* DISPLAY RECTANGLE CALCULATION
@@ -172,9 +179,10 @@ buttons.forEach((button) => {
 
         /* ----------------------------------------------- TRIANGLE CALCULATE ----------------------------------------------- */
         if (event.target.classList.contains('triangle')) {
-            inputOfTriangle.forEach((input) => {
-                if (input.value < 0) {
-                    input.value = 0;
+            //* IF THE INPUT VALUE IS NOT ENTERED (EMPTY)
+            inputOfTriangle.forEach((inTriangle) => {
+                if (inTriangle.value === '') {
+                    inTriangle.value = 0;
                 }
             });
 
@@ -225,10 +233,10 @@ buttons.forEach((button) => {
 
         /* ------------------------------------------- TRAPEZOID CALCULATE ------------------------------------------ */
         if (event.target.classList.contains('trapezoid')) {
-            //* if user input value under zero for all input tag
-            inputOfTrapezoid.forEach((input) => {
-                if (input.value < 0) {
-                    input.value = 0;
+            //* IF THE INPUT VALUE IS NOT ENTERED (EMPTY)
+            inputOfTrapezoid.forEach((inTrapezoid) => {
+                if (inTrapezoid.value === '') {
+                    inTrapezoid.value = 0;
                 }
             });
 
