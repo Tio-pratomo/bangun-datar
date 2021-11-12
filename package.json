@@ -2,7 +2,6 @@
     "name": "mini_project_membuat_perhitungan_bangun_datar",
     "version": "1.0.0",
     "description": "ini merupakan project menghitung luas bangun datar, dimana kita dapat memasukkan input kemudian kalkulasi hitungannya",
-    "main": "index.js",
     "scripts": {
         "start": "parcel ./*.html",
         "predeploy": "rm -rf dist && parcel build ./*.html --public-url https://github.com/Tio-pratomo/bangun-datar.git",
