@@ -29,6 +29,13 @@ import {
     inputOfTrapezoid,
 } from './trapezoid.mjs';
 
+/* -------------------------------------------- IMPORT FROM PARALLELOGRAM ------------------------------------------- */
+import {
+    listGroupParallelogram,
+    explainationParallelogram,
+    inputOfParallelogram,
+} from './parallelogram.mjs';
+
 /* --------------------------------------- CALCULATE IF BUTTON CLICKED BY USER -------------------------------------- */
 buttons.forEach((button) => {
     button.addEventListener('click', function (event) {
@@ -297,6 +304,59 @@ buttons.forEach((button) => {
                 parseInt(spanTrapezoidSideB[0].innerHTML) +
                 parseInt(spanTrapezoidSideC.innerHTML) +
                 parseInt(spanTrapezoidHeight[0].innerHTML);
+        }
+
+        /* ---------------------------------------- PARALLELOGRAM CALCULATION --------------------------------------- */
+        if (event.target.classList.contains('parallelogram')) {
+            //* VALIDATION IF USER DIDNT INSERT INPUT VALUE
+            inputOfParallelogram.forEach((input) => {
+                if (input.value === '') {
+                    input.value = 0;
+                }
+            });
+
+            //* EXPLAINATION FOR CALCULATION OF PARALLELOGRAM
+            explainationParallelogram.innerHTML = listGroupParallelogram;
+
+            //* INSERT TAG SPAN class="parallelogram-side-a"
+            const parallelogramA = [
+                ...document.querySelectorAll('.parallelogram-side-a'),
+            ];
+
+            parallelogramA.forEach((sideA) => {
+                sideA.innerHTML = inputOfParallelogram[0].value;
+            });
+
+            //* INSERT TAG SPAN class="parallelogram-side-b"
+            const parallelogramB = [
+                ...document.querySelectorAll('.parallelogram-side-b'),
+            ];
+
+            parallelogramB.forEach((sideB) => {
+                sideB.innerHTML = inputOfParallelogram[2].value;
+            });
+
+            //* PARALLELOGRAM AREA
+            const parallelogramHeight = document.querySelector(
+                '.parallelogram-height'
+            );
+            const parallelogramArea = document.querySelector(
+                '.parallelogram-area'
+            );
+
+            parallelogramHeight.innerHTML = inputOfParallelogram[1].value;
+            parallelogramArea.innerHTML =
+                parseInt(parallelogramA[0].innerHTML) *
+                parseInt(parallelogramHeight.innerHTML);
+
+            //* PERIMETER OF PARALLELOGRAM
+            const perimeterOfParallelogram = document.querySelector(
+                '.perimeter-of-parallelogram'
+            );
+
+            perimeterOfParallelogram.innerHTML =
+                2 * inputOfParallelogram[0].value +
+                2 * inputOfParallelogram[2].value;
         }
     });
 });
