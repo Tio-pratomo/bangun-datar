@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "start": "parcel ./*.html",
-        "predeploy": "rm -rf dist && parcel build ./*.html --public-url",
+        "predeploy": "rm -rf dist && parcel build ./*.html --public-url https://github.com/Tio-pratomo/bangun-datar.git",
         "deploy": "gh-pages -d dist"
     },
     "keywords": [],
