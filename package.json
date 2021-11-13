@@ -6,7 +6,7 @@
         "start": "parcel ./*.html",
         "prebuild": "rm -rf dist/*",
         "build": "parcel build ./*.html --public-url ./",
-        "push-gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
+        "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
     },
     "keywords": [],
     "author": "",
