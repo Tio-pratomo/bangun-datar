@@ -10,7 +10,7 @@ p {
 .header {
     padding: 120px 0 30px;
     height: 50vh;
-    background-image: url(../img/banner.jpg);
+    background-image: url(banner.5cdfd78a.jpg);
     transform: skew(0deg, 4deg) translateY(-120px);
     -webkit-transform: skew(0deg, 4deg) translateY(-120px);
     -moz-transform: skew(0deg, 4deg) translateY(-120px);
@@ -49,3 +49,5 @@ main {
 .bc-purple:hover {
     background-color: #e923ff;
 }
+
+/*# sourceMappingURL=index.c2ff2873.css.map */
