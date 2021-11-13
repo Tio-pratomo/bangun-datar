@@ -4,8 +4,9 @@
     "description": "ini merupakan project menghitung luas bangun datar, dimana kita dapat memasukkan input kemudian kalkulasi hitungannya",
     "scripts": {
         "start": "parcel ./*.html",
-        "predeploy": "rm -rf dist && parcel build ./*.html --public-url https://github.com/Tio-pratomo/bangun-datar.git",
-        "deploy": "gh-pages -d dist"
+        "prebuild": "rm -rf dist/*",
+        "build": "parcel build ./*.html --public-url ./",
+        "push-gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
     },
     "keywords": [],
     "author": "",
