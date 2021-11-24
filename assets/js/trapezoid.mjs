@@ -1,7 +1,7 @@
 /* --------------------------------------------- START TRAPEZOID SECTION --------------------------------------------- */
 //* EXPLAINATION FOR TRAPEZOID
 const listGroupTrapezoid = /* html */ `
-<ul class="list-group list-group-flush">
+<ul class="list-group list-group-flush animate__animated animate__fadeIn">
     <li class="list-group-item">
         Luas = ( <span class="trapezoid-side-a"></span> + <span class="trapezoid-side-b"></span> ) x <span class="trapezoid-height"></span> ÷ 2
     </li>
@@ -21,9 +21,7 @@ const listGroupTrapezoid = /* html */ `
 const explainationTrapezoid = document.querySelector('.explaination-trapezoid');
 
 //* SELECT INPUT FOR TRAPEZOID
-const inputOfTrapezoid = [
-    ...document.querySelectorAll('.form-group.trapezoid input'),
-];
+const inputOfTrapezoid = [...document.querySelectorAll('.form-group.trapezoid input')];
 
 /* ---------------------------------------------- END TRAPEZOID SECTION --------------------------------------------- */
 export { listGroupTrapezoid, explainationTrapezoid, inputOfTrapezoid };

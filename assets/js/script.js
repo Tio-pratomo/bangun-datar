@@ -16,18 +16,10 @@ import {
 } from './rectangle.mjs';
 
 /* ---------------------------------------------- IMPORT FROM TRIANGLE ---------------------------------------------- */
-import {
-    listGroupTriangle,
-    explainationTriangle,
-    inputOfTriangle,
-} from './triangle.mjs';
+import { listGroupTriangle, explainationTriangle, inputOfTriangle } from './triangle.mjs';
 
 /* ---------------------------------------------- IMPORT FROM TRAPEZOID --------------------------------------------- */
-import {
-    listGroupTrapezoid,
-    explainationTrapezoid,
-    inputOfTrapezoid,
-} from './trapezoid.mjs';
+import { listGroupTrapezoid, explainationTrapezoid, inputOfTrapezoid } from './trapezoid.mjs';
 
 /* -------------------------------------------- IMPORT FROM PARALLELOGRAM ------------------------------------------- */
 import {
@@ -63,16 +55,13 @@ buttons.forEach((button) => {
             const spanPhi = [...document.querySelectorAll('.phi')];
 
             // * SELECT ELEMENT SPAN INPUT USER
-            const spanInputCircle = [
-                ...document.querySelectorAll('.input-circle'),
-            ];
+            const spanInputCircle = [...document.querySelectorAll('.input-circle')];
 
             // * TOTAL AREA CIRCLE
             const spanTotalAreaCircle = document.querySelector('.total-circle');
 
             //* TOTAL CIRCUMFERENCE(KELILING) CIRCLE
-            const spanTotalCircumferenceCircle =
-                document.querySelector('.total-circle-k');
+            const spanTotalCircumferenceCircle = document.querySelector('.total-circle-k');
 
             spanPhi.forEach((sPHI) => {
                 parseInt(inputCircle.value) % 7 === 0
@@ -90,12 +79,10 @@ buttons.forEach((button) => {
                     Math.pow(spanInputCircle[1].innerHTML, 2);
 
                 spanTotalCircumferenceCircle.innerHTML =
-                    ((2 * parseInt(spanPhi[2].innerHTML)) / 7) *
-                    spanInputCircle[3].innerHTML;
+                    ((2 * parseInt(spanPhi[2].innerHTML)) / 7) * spanInputCircle[3].innerHTML;
             } else {
                 spanTotalAreaCircle.innerHTML =
-                    spanPhi[1].innerHTML *
-                    Math.pow(spanInputCircle[1].innerHTML, 2);
+                    spanPhi[1].innerHTML * Math.pow(spanInputCircle[1].innerHTML, 2);
 
                 spanTotalCircumferenceCircle.innerHTML = (
                     2 *
@@ -122,9 +109,7 @@ buttons.forEach((button) => {
             const squareArea = document.querySelector('.square-area');
 
             //* PERIMETER OF SQUARE
-            const perimeterOfSquare = document.querySelector(
-                '.perimeter-of-square'
-            );
+            const perimeterOfSquare = document.querySelector('.perimeter-of-square');
 
             lateral.forEach((lat) => {
                 lat.innerHTML = inputSquare.value;
@@ -149,20 +134,12 @@ buttons.forEach((button) => {
             //* DISPLAY RECTANGLE CALCULATION
             explainationRectangle.innerHTML = listGroupRectangle;
 
-            const spanRectangleWidth =
-                document.querySelectorAll('.rectangle-width');
-            const spanrectangleHeight =
-                document.querySelectorAll('.rectangle-height');
+            const spanRectangleWidth = document.querySelectorAll('.rectangle-width');
+            const spanrectangleHeight = document.querySelectorAll('.rectangle-height');
             const rectangleArea = document.querySelector('.rectangle-area');
-            const sumRectangleWidth = document.querySelector(
-                '.sum-rectangle-width'
-            );
-            const sumRectangleHeight = document.querySelector(
-                '.sum-rectangle-height'
-            );
-            const perimeterOfRectangle = document.querySelector(
-                '.perimeter-of-rectangle'
-            );
+            const sumRectangleWidth = document.querySelector('.sum-rectangle-width');
+            const sumRectangleHeight = document.querySelector('.sum-rectangle-height');
+            const perimeterOfRectangle = document.querySelector('.perimeter-of-rectangle');
 
             spanRectangleWidth.forEach((spanRW) => {
                 spanRW.innerHTML = inputRectangleWidth.value;
@@ -173,15 +150,13 @@ buttons.forEach((button) => {
             });
 
             rectangleArea.innerHTML =
-                spanRectangleWidth[0].innerHTML *
-                spanrectangleHeight[0].innerHTML;
+                spanRectangleWidth[0].innerHTML * spanrectangleHeight[0].innerHTML;
 
             sumRectangleWidth.innerHTML = 2 * inputRectangleWidth.value;
             sumRectangleHeight.innerHTML = 2 * inputRectangleHeight.value;
 
             perimeterOfRectangle.innerHTML =
-                parseInt(sumRectangleWidth.innerHTML) +
-                parseInt(sumRectangleHeight.innerHTML);
+                parseInt(sumRectangleWidth.innerHTML) + parseInt(sumRectangleHeight.innerHTML);
         }
 
         /* ----------------------------------------------- TRIANGLE CALCULATE ----------------------------------------------- */
@@ -195,26 +170,17 @@ buttons.forEach((button) => {
 
             explainationTriangle.innerHTML = listGroupTriangle;
 
-            const spanTriangleBase = [
-                ...document.querySelectorAll('span.triangle-base'),
-            ];
+            const spanTriangleBase = [...document.querySelectorAll('span.triangle-base')];
 
-            const spanTriangleHeight = document.querySelector(
-                'span.triangle-height'
-            );
-            const spanTriangleSumAt = document.querySelector(
-                'span.triangle-sum-at'
-            );
-            const spanTriangleArea =
-                document.querySelector('span.triangle-area');
+            const spanTriangleHeight = document.querySelector('span.triangle-height');
+            const spanTriangleSumAt = document.querySelector('span.triangle-sum-at');
+            const spanTriangleArea = document.querySelector('span.triangle-area');
 
             const spanTriangleB = document.querySelector('span.triangle-b');
 
             const spanTriangleC = document.querySelector('span.triangle-c');
 
-            const spanPerimeterOfTriangle = document.querySelector(
-                'span.perimeter-of-triangle'
-            );
+            const spanPerimeterOfTriangle = document.querySelector('span.perimeter-of-triangle');
 
             spanTriangleBase.forEach((spanTB) => {
                 spanTB.innerHTML = inputOfTriangle[0].value;
@@ -223,11 +189,9 @@ buttons.forEach((button) => {
             spanTriangleHeight.innerHTML = inputOfTriangle[1].value;
 
             spanTriangleSumAt.innerHTML =
-                parseInt(spanTriangleBase[0].innerHTML) *
-                parseInt(spanTriangleHeight.innerHTML);
+                parseInt(spanTriangleBase[0].innerHTML) * parseInt(spanTriangleHeight.innerHTML);
 
-            spanTriangleArea.innerHTML =
-                (1 * parseInt(spanTriangleSumAt.innerHTML)) / 2;
+            spanTriangleArea.innerHTML = (1 * parseInt(spanTriangleSumAt.innerHTML)) / 2;
 
             spanTriangleB.innerHTML = inputOfTriangle[2].value;
             spanTriangleC.innerHTML = inputOfTriangle[3].value;
@@ -251,30 +215,19 @@ buttons.forEach((button) => {
             explainationTrapezoid.innerHTML = listGroupTrapezoid;
 
             //* SELECT ALL TAG SPAN CONTAIN class = "trapezoid-side-a"
-            const spanTrapezoidSideA = [
-                ...document.querySelectorAll('.trapezoid-side-a'),
-            ];
+            const spanTrapezoidSideA = [...document.querySelectorAll('.trapezoid-side-a')];
 
-            const spanTrapezoidSideB = [
-                ...document.querySelectorAll('.trapezoid-side-b'),
-            ];
+            const spanTrapezoidSideB = [...document.querySelectorAll('.trapezoid-side-b')];
 
-            const spanTrapezoidSideC =
-                document.querySelector('.trapezoid-side-c');
+            const spanTrapezoidSideC = document.querySelector('.trapezoid-side-c');
 
-            const spanTrapezoidHeight = [
-                ...document.querySelectorAll('.trapezoid-height'),
-            ];
+            const spanTrapezoidHeight = [...document.querySelectorAll('.trapezoid-height')];
 
-            const calculateTrapezoidA = document.querySelector(
-                '.calculate-trapezoid-a'
-            );
+            const calculateTrapezoidA = document.querySelector('.calculate-trapezoid-a');
 
             const trapezoidArea = document.querySelector('.trapezoid-area');
 
-            const perimeterOfTrapezoid = document.querySelector(
-                '.perimeter-of-trapezoid'
-            );
+            const perimeterOfTrapezoid = document.querySelector('.perimeter-of-trapezoid');
 
             //* INSERT ALL TAG SPAN class="trapezoid-side-a" ACCORDING INPUT USER
             spanTrapezoidSideA.forEach((sideA) => {
@@ -296,8 +249,7 @@ buttons.forEach((button) => {
                     parseInt(spanTrapezoidSideB[0].innerHTML)) *
                 parseInt(spanTrapezoidHeight[0].innerHTML);
 
-            trapezoidArea.innerHTML =
-                parseInt(calculateTrapezoidA.innerHTML) / 2;
+            trapezoidArea.innerHTML = parseInt(calculateTrapezoidA.innerHTML) / 2;
 
             perimeterOfTrapezoid.innerHTML =
                 parseInt(spanTrapezoidSideA[0].innerHTML) +
@@ -319,44 +271,39 @@ buttons.forEach((button) => {
             explainationParallelogram.innerHTML = listGroupParallelogram;
 
             //* INSERT TAG SPAN class="parallelogram-side-a"
-            const parallelogramA = [
-                ...document.querySelectorAll('.parallelogram-side-a'),
-            ];
+            const parallelogramA = [...document.querySelectorAll('.parallelogram-side-a')];
 
             parallelogramA.forEach((sideA) => {
                 sideA.innerHTML = inputOfParallelogram[0].value;
             });
 
             //* INSERT TAG SPAN class="parallelogram-side-b"
-            const parallelogramB = [
-                ...document.querySelectorAll('.parallelogram-side-b'),
-            ];
+            const parallelogramB = [...document.querySelectorAll('.parallelogram-side-b')];
 
             parallelogramB.forEach((sideB) => {
                 sideB.innerHTML = inputOfParallelogram[2].value;
             });
 
             //* PARALLELOGRAM AREA
-            const parallelogramHeight = document.querySelector(
-                '.parallelogram-height'
-            );
-            const parallelogramArea = document.querySelector(
-                '.parallelogram-area'
-            );
+            const parallelogramHeight = document.querySelector('.parallelogram-height');
+            const parallelogramArea = document.querySelector('.parallelogram-area');
 
             parallelogramHeight.innerHTML = inputOfParallelogram[1].value;
             parallelogramArea.innerHTML =
-                parseInt(parallelogramA[0].innerHTML) *
-                parseInt(parallelogramHeight.innerHTML);
+                parseInt(parallelogramA[0].innerHTML) * parseInt(parallelogramHeight.innerHTML);
 
             //* PERIMETER OF PARALLELOGRAM
-            const perimeterOfParallelogram = document.querySelector(
-                '.perimeter-of-parallelogram'
-            );
+            const perimeterOfParallelogram = document.querySelector('.perimeter-of-parallelogram');
 
             perimeterOfParallelogram.innerHTML =
-                2 * inputOfParallelogram[0].value +
-                2 * inputOfParallelogram[2].value;
+                2 * inputOfParallelogram[0].value + 2 * inputOfParallelogram[2].value;
         }
     });
 });
+
+/* --------------------------------------------- COPYRIGHT YEARS SECTION -------------------------------------------- */
+const spanCopyright = document.querySelector('.copy-right');
+
+const currentYear = new Date().getFullYear();
+
+spanCopyright.innerText = currentYear;

@@ -1,7 +1,7 @@
 /* ------------------------------------------- START PARALLELOGRAM SECTION ------------------------------------------ */
 //* EXPLAINATION FOR PARALLELOGRAM
 const listGroupParallelogram = /* html */ `
-<ul class="list-group list-group-flush">
+<ul class="list-group list-group-flush animate__animated animate__fadeIn">
     <li class="list-group-item">
         Luas = <span class="parallelogram-side-a"></span> x <span class="parallelogram-height"></span> = <span class="parallelogram-area"></span>
     </li>
@@ -17,18 +17,10 @@ const listGroupParallelogram = /* html */ `
 `;
 
 //* PARENT PARALLELOGRAM
-const explainationParallelogram = document.querySelector(
-    '.explaination-parallelogram'
-);
+const explainationParallelogram = document.querySelector('.explaination-parallelogram');
 
 //* SELECT ALL INPUT PARALLELOGRAM
-const inputOfParallelogram = [
-    ...document.querySelectorAll('.form-group.parallelogram input'),
-];
+const inputOfParallelogram = [...document.querySelectorAll('.form-group.parallelogram input')];
 /* -------------------------------------------- END PARALLELOGRAM SECTION ------------------------------------------- */
 
-export {
-    listGroupParallelogram,
-    explainationParallelogram,
-    inputOfParallelogram,
-};
+export { listGroupParallelogram, explainationParallelogram, inputOfParallelogram };

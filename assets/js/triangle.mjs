@@ -1,7 +1,7 @@
 /* --------------------------------------------- START TRIANGLE SECTION --------------------------------------------- */
 //* EXPLAINATION FOR TRIANGLE
 const listGroupTriangle = /* html */ `
-<ul class="list-group list-group-flush">
+<ul class="list-group list-group-flush animate__animated animate__fadeIn">
     <li class="list-group-item">
         Luas = 1/2 x <span class="triangle-base"></span> x <span class="triangle-height"></span>
     </li>
@@ -21,9 +21,7 @@ const listGroupTriangle = /* html */ `
 const explainationTriangle = document.querySelector('.explaination-triangle');
 
 //* SELECT INPUT OF TRIANGLE
-const inputOfTriangle = [
-    ...document.querySelectorAll('.form-group.triangle input'),
-];
+const inputOfTriangle = [...document.querySelectorAll('.form-group.triangle input')];
 
 /* ---------------------------------------------- END TRIANGLE SECTION ---------------------------------------------- */
 

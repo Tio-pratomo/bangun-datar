@@ -1,7 +1,7 @@
 /* ------------------------------------------------ SQUARE SECTION ----------------------------------------------- */
 //* EXPLAINATION Square SECTION
 const listGroupSquare = /* html */ `
-<ul class="list-group list-group-flush">
+<ul class="list-group list-group-flush animate__animated animate__fadeIn">
     <li class="list-group-item">
         Luas = <span class="lateral"></span> x <span class="lateral"></span> = <span class="square-area"></span>
     </li>

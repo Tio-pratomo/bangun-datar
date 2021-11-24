@@ -1,7 +1,7 @@
 /* ------------------------------------------------ CIRCLE SECTION ----------------------------------------------- */
 //* EXPLAINATION CIRCLE SECTION
 const listGroupCircle = /* html */ `
-<ul class="list-group list-group-flush">
+<ul class="list-group list-group-flush animate__animated animate__fadeIn">
     <li class="list-group-item">
         Luas = <span class="phi"></span> x <span class="input-circle"></span><sup>2</sup>
     </li>

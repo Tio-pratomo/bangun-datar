@@ -1,7 +1,7 @@
 /* ------------------------------------------------ RECTANGLE SECTION ----------------------------------------------- */
 //* EXPLANIATION RECTANGLE SECTION
 const listGroupRectangle = /* html */ `
-<ul class="list-group list-group-flush">
+<ul class="list-group list-group-flush animate__animated animate__fadeIn">
     <li class="list-group-item">
         Luas = <span class="rectangle-width"></span> x <span class="rectangle-height"></span> = <span class="rectangle-area"></span>
     </li>
@@ -18,18 +18,9 @@ const listGroupRectangle = /* html */ `
 const explainationRectangle = document.querySelector('.explaination-rectangle');
 
 //* SELECT INPUT ELEMENT RECTANGLE SECTION
-const inputRectangleWidth = document.querySelector(
-    'input[name = "number-width"]'
-);
+const inputRectangleWidth = document.querySelector('input[name = "number-width"]');
 
-const inputRectangleHeight = document.querySelector(
-    'input[name = "number-height"]'
-);
+const inputRectangleHeight = document.querySelector('input[name = "number-height"]');
 
 /* ---------------------------------------------- END RECTANGLE SECTION --------------------------------------------- */
-export {
-    listGroupRectangle,
-    explainationRectangle,
-    inputRectangleWidth,
-    inputRectangleHeight,
-};
+export { listGroupRectangle, explainationRectangle, inputRectangleWidth, inputRectangleHeight };
