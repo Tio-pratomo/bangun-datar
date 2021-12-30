@@ -4,6 +4,8 @@ import Rectangle from './rectangle.js';
 import Triangle from './triangle.js';
 import Trapezoid from './trapezoid.js';
 import Parallelogram from './parallelogram.js';
+import Rhombus from './rhombus.js';
+import Kite from './kite.js';
 
 /* ---------------------------------------------------- COPYRIGHT --------------------------------------------------- */
 const currentYear = new Date().getFullYear();
@@ -229,5 +231,67 @@ buttonParallelogram.addEventListener('click', function () {
         document.querySelectorAll('.parallelogram-a'),
         document.querySelectorAll('.parallelogram-b'),
         document.querySelector('.perimeter-of-parallelogram')
+    );
+});
+
+/* ------------------------------------------------- SECTION RHOMBUS ------------------------------------------------ */
+
+const expElementRhombus = /* html */ `
+<ul class="list-group list-group-flush animate__animated animate__fadeIn">
+    <li class="list-group-item rhombus-area1"></li>
+    
+    <li class="list-group-item rhombus-area2"></li>
+
+    <li class="list-group-item perimeter-of-rhombus1"></li>
+
+    <li class="list-group-item perimeter-of-rhombus2"></li>
+</ul>
+`;
+
+const rhombus = new Rhombus(document.querySelector('.explaination-rhombus'), expElementRhombus, [
+    document.querySelector('#rhombus-d1'),
+    document.querySelector('#rhombus-d2'),
+    document.querySelector('#rhombus-s'),
+]);
+
+const buttonRhombus = document.querySelector('button.rhombus');
+buttonRhombus.addEventListener('click', function () {
+    rhombus.sanitizeInputUser();
+    rhombus.displayCalculate();
+    rhombus.displayAreaOfRhombus(document.querySelector('.rhombus-area1'), document.querySelector('.rhombus-area2'));
+    rhombus.displayPerimeterOfRhombus(
+        document.querySelector('.perimeter-of-rhombus1'),
+        document.querySelector('.perimeter-of-rhombus2')
+    );
+});
+
+/* -------------------------------------------------- SECTION KITE -------------------------------------------------- */
+const expElementKite = /* html */ `
+<ul class="list-group list-group-flush animate__animated animate__fadeIn">
+    <li class="list-group-item kite-area1"></li>
+    
+    <li class="list-group-item kite-area2"></li>
+
+    <li class="list-group-item perimeter-of-kite1"></li>
+
+    <li class="list-group-item perimeter-of-kite2"></li>
+</ul>
+`;
+
+const kite = new Kite(document.querySelector('.explaination-kite'), expElementKite, [
+    document.querySelector('#kite-d1'),
+    document.querySelector('#kite-d2'),
+    document.querySelector('#kite-a'),
+    document.querySelector('#kite-b'),
+]);
+
+const buttonKite = document.querySelector('button.kite');
+buttonKite.addEventListener('click', function () {
+    kite.sanitizeInputUser();
+    kite.displayCalculate();
+    kite.displayAreaOfKite(document.querySelector('.kite-area1'), document.querySelector('.kite-area2'));
+    kite.displayPerimeterOfKite(
+        document.querySelector('.perimeter-of-kite1'),
+        document.querySelector('.perimeter-of-kite2')
     );
 });
