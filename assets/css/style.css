@@ -1,5 +1,6 @@
 body {
     font-family: 'Open Sans', sans-serif;
+    height: 100%;
 }
 
 p {
@@ -7,19 +8,26 @@ p {
     font-size: 1rem;
 }
 
-.header {
-    padding: 120px 0 30px;
+.box-banner {
+    position: relative;
+}
+
+.box-banner img {
+    position: absolute;
+    top: 0;
+    z-index: -1;
     height: 50vh;
-    background-image: url(../img/banner.jpg);
-    transform: skew(0deg, 4deg) translateY(-120px);
-    -webkit-transform: skew(0deg, 4deg) translateY(-120px);
-    -moz-transform: skew(0deg, 4deg) translateY(-120px);
-    -ms-transform: skew(0deg, 4deg) translateY(-120px);
-    -o-transform: skew(0deg, 4deg) translateY(-120px);
+    width: 100%;
+    transform: skew(0, 4deg) translateY(-90px);
+    -webkit-transform: skew(0, 4deg) translateY(-90px);
+    -moz-transform: skew(0, 4deg) translateY(-90px);
+    -ms-transform: skew(0, 4deg) translateY(-90px);
+    -o-transform: skew(0, 4deg) translateY(-90px);
+    opacity: 0.7;
 }
 
 header {
-    margin: 0 0 20vh;
+    margin: 45vh 0 20vh;
 }
 
 .introduction p {
@@ -57,4 +65,16 @@ header {
 
 footer p {
     font-size: 0.875rem;
+}
+
+/* 
+    SECTION FAKTORIAL
+*/
+
+span.text-monospace {
+    font-size: 1.125rem;
+}
+
+span.result-faktorial {
+    margin-left: 6px;
 }

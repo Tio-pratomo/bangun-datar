@@ -7,7 +7,7 @@
         <meta name="keywords" content="matematika, bangun datar" />
         <meta
             name="description"
-            content="Disini kita akan menghitung bangun datar dengan sangat mudah. Kalian tinggal masukkan angka dalam kolom hitungan, kemudian klik hitung. Setelah itu kita akan dapat penjelasan dari cara menghitung bangun ruang tersebut."
+            content="Disini kita akan menghitung bangun datar dengan sangat mudah. Kalian tinggal masukkan angka dalam kolom hitungan, kemudian klik hitung. Setelah itu kita akan dapat penjelasan dari cara menghitung bangun datar tersebut."
         />
         <meta name="author" content="sulistio" />
 
@@ -39,8 +39,38 @@
     </head>
 
     <body>
+        <!-- -------------------------------------------- START NAVBAR --------------------------------------------- -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="/index.html">MTK</a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse ml-5" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link" href="./index.html">Home</a>
+                        <a class="nav-link" href="./faktorial.html">Faktorial</a>
+                        <a class="nav-link" href="./bangun-ruang.html">Bangun Ruang</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- --------------------------------------------- END NAVBAR ---------------------------------------------- -->
+
         <!-- ------------------------------------------------ START BANNER ------------------------------------------------- -->
-        <div class="mb-0 header"></div>
+
+        <div class="mb-0 box-banner">
+            <img src="assets/img/banner.jpg" alt="banner" />
+        </div>
+
         <!-- ------------------------------------------------- END BANNER -------------------------------------------------- -->
 
         <!-- --------------------------------------------- START INTRODUCTION ---------------------------------------------- -->
@@ -58,7 +88,7 @@
                     <p class="mt-3">
                         Disini kita akan menghitung bangun datar dengan sangat mudah. Kalian tinggal masukkan angka
                         dalam kolom hitungan, kemudian klik hitung. Setelah itu kita akan dapat penjelasan dari cara
-                        menghitung bangun ruang tersebut.
+                        menghitung bangun datar tersebut.
                     </p>
                 </div>
             </div>
@@ -487,6 +517,163 @@
                     </div>
                 </div>
                 <!-- ----------------------------------------------END ROW 3 ---------------------------------------------- -->
+
+                <!-- ---------------------------------------- START RHOMBUS ---------------------------------------- -->
+                <div class="row mt-5">
+                    <div class="col-md-12">
+                        <div class="box-container container-fluid">
+                            <!--* HEADING RHOMBUS -->
+                            <div class="row">
+                                <div class="col-md-12 py-2">
+                                    <h3 class="c-purple">Belah Ketupat</h3>
+                                </div>
+                            </div>
+                            <!--* END HEADING RHOMBUS -->
+
+                            <!--* FORMULA, INPUT USER, IMAGE FORM RHOMBUS -->
+                            <div class="row justify-content-between">
+                                <div class="col-md-6 border border-danger rounded">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <p class="font-weight-bold my-3">Rumus Belah Ketupat</p>
+                                            <p>Luas = 1/2 x d1 x d2</p>
+                                            <p>Keliling = 4 x s</p>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <img
+                                                src="assets/img/Belah_Ketupat.png"
+                                                alt="belah ketupat"
+                                                class="img-fluid my-3"
+                                            />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group mt-3">
+                                        <label for="rhombus-d1">Masukkan diagonal 1</label>
+                                        <input
+                                            class="form-control"
+                                            type="number"
+                                            name="rhombus-d1"
+                                            id="rhombus-d1"
+                                            min="0"
+                                        />
+
+                                        <label for="rhombus-d2" class="mt-3">Masukkan Diagonal 2</label>
+                                        <input
+                                            class="form-control"
+                                            type="number"
+                                            name="rhombus-d2"
+                                            id="rhombus-d2"
+                                            min="0"
+                                        />
+
+                                        <label for="rhombus-s" class="mt-3">Masukkan Sisi-nya (s)</label>
+                                        <input
+                                            class="form-control"
+                                            type="number"
+                                            name="rhombus-s"
+                                            id="rhombus-s"
+                                            min="0"
+                                        />
+
+                                        <button class="btn bc-purple text-light mt-3 rhombus">Hitung</button>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 p-2 explaination-rhombus"></div>
+                            </div>
+                        </div>
+                        <!--* END FORMULA, INPUT USER, IMAGE FORM RHOMBUS -->
+                    </div>
+                </div>
+                <!-- ----------------------------------------- END RHOMBUS ----------------------------------------- -->
+
+                <!-- ----------------------------------------- START KITE ------------------------------------------ -->
+                <div class="row mt-5">
+                    <div class="col-md-12">
+                        <div class="box-container container-fluid">
+                            <!--* HEADING KITE -->
+                            <div class="row">
+                                <div class="col-md-12 py-2">
+                                    <h3 class="c-purple">Layang-Layang</h3>
+                                </div>
+                            </div>
+                            <!--* END HEADING KITE -->
+
+                            <!--* FORMULA, INPUT USER, IMAGE FORM KITE -->
+                            <div class="row">
+                                <div class="col-md-6 px-4 border border-danger rounded align-self-start">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <p class="font-weight-bold my-3">Rumus Layang-Layang</p>
+                                            <p>Luas = 1/2 x d1 x d2</p>
+                                            <p>Keliling = (2 x a) + (2 x b)</p>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <img
+                                                src="assets/img/Layang-Layang.png"
+                                                alt="layang layang"
+                                                class="img-fluid my-3"
+                                            />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <div class="col-md-6">
+                                            <label for="kite-d1">Masukkan diagonal 1</label>
+                                            <input
+                                                class="form-control"
+                                                type="number"
+                                                name="kite-d1"
+                                                id="kite-d1"
+                                                min="0"
+                                            />
+
+                                            <label for="kite-d2" class="mt-3">Masukkan diagonal 2</label>
+                                            <input
+                                                class="form-control"
+                                                type="number"
+                                                name="kite-d2"
+                                                id="kite-d2"
+                                                min="0"
+                                            />
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <label for="kite-a" class="mt-3 mt-md-0">Masukkan Sisi (a)</label>
+                                            <input
+                                                class="form-control"
+                                                type="number"
+                                                name="kite-a"
+                                                id="kite-a"
+                                                min="0"
+                                            />
+
+                                            <label for="kite-b" class="mt-3">Masukkan Sisi (b)</label>
+                                            <input
+                                                class="form-control"
+                                                type="number"
+                                                name="kite-b"
+                                                id="kite-b"
+                                                min="0"
+                                            />
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <button class="btn bc-purple text-light mt-3 kite">Hitung</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 px-4 explaination-kite"></div>
+                            </div>
+                            <!--* END FORMULA, INPUT USER, IMAGE FORM KITE -->
+                        </div>
+                    </div>
+                </div>
+                <!-- ------------------------------------------ END KITE ------------------------------------------- -->
             </div>
         </main>
 
@@ -496,7 +683,7 @@
                     <p class="text-light text-md-center">
                         &copy;
                         <span class="copy-right"></span>
-                        | Website ini dibuat oleh sulistio pratomo
+                        | Website ini dibuat oleh Sulistio Pratomo
                     </p>
                 </div>
 
