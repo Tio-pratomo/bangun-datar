@@ -7,10 +7,11 @@ class Faktorial {
     sanitizeInputUser(...elements) {
         const [parentNode, elementBefore, button] = elements;
 
-        if (this.inputUser.value === '') {
+        if (this.inputUser.value === '' || this.inputUser.value === '0') {
             this.inputUser.value = 0;
-        } else if (this.inputUser.value < 0) {
-            this.inputUser.value *= 0;
+        } else if (this.inputUser.value < 0 || this.inputUser.value > 50) {
+            parentNode.insertBefore(this.createElementAlert(), elementBefore);
+            button.disabled = true;
         } else if (this.inputUser.value.charAt(0) === '0') {
             const tempArr = this.inputUser.value.split('');
             tempArr.shift();
@@ -20,12 +21,6 @@ class Faktorial {
                 parentNode.insertBefore(this.createElementAlert(), elementBefore);
                 button.disabled = true;
             }
-        } else if (this.inputUser.value > 50) {
-            this.inputUser.value > 50
-                ? parentNode.insertBefore(this.createElementAlert(), elementBefore)
-                : this.inputUser.value;
-
-            button.disabled = true;
         }
     }
 
@@ -45,8 +40,14 @@ class Faktorial {
     }
 
     displayFaktorial(element) {
-        if (this.inputUser.value < 51) {
-            const tempArr = [];
+        const tempArr = [];
+        const userValue = Number(this.inputUser.value);
+
+        if (userValue === 0) {
+            element.innerText = `0 ! = 1`;
+        } else if (userValue === 1) {
+            element.innerText = `1 ! = 1`;
+        } else if (userValue > 0 && userValue < 51) {
             let displayString = `${this.inputUser.value} ! = `;
             const x = ' x ';
 
@@ -56,22 +57,18 @@ class Faktorial {
                 tempArr.push(i);
             }
 
-            if (tempArr.length === 0) {
-                element.innerText = `0 ! = 1`;
-            } else {
-                tempArr.forEach((value) => {
-                    displayString += value;
-                    displayString += x;
-                });
+            tempArr.forEach((value) => {
+                displayString += value;
+                displayString += x;
+            });
 
-                const result = tempArr.reduce((acc, currVal) => acc * currVal);
+            const result = tempArr.reduce((acc, currVal) => acc * currVal);
 
-                let finalString = displayString.slice(0, -2);
+            let finalString = displayString.slice(0, -2);
 
-                finalString += ` = ${result.toLocaleString('id-ID')}`;
+            finalString += ` = ${result.toLocaleString('id-ID')}`;
 
-                element.innerText = finalString;
-            }
+            element.innerText = finalString;
         }
     }
 }
