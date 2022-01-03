@@ -7,7 +7,7 @@ class TwoDimensional {
 
     sanitizeInputUser() {
         this.inputUser.forEach((element) => {
-            if (element.value === '') {
+            if (element.value === '' || element.value === '0') {
                 element.value = 0;
             } else if (element.value < 0) {
                 element.value *= -1;
