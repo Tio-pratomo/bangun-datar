@@ -1,3 +1,5 @@
+import { getCurrentYear } from './misc.js';
+
 class Faktorial {
     constructor(boxExp, inputUser) {
         this.boxExp = boxExp;
@@ -39,14 +41,14 @@ class Faktorial {
         return div;
     }
 
-    displayFaktorial(element) {
+    displayFaktorial() {
         const tempArr = [];
         const userValue = Number(this.inputUser.value);
 
         if (userValue === 0) {
-            element.innerText = `0 ! = 1`;
+            this.boxExp.innerHTML = /* html */ `<span class="animate__animated animate__fadeIn">0 ! = 1</span>`;
         } else if (userValue === 1) {
-            element.innerText = `1 ! = 1`;
+            this.boxExp.innerHTML = /* html */ `<span class="animate__animated animate__fadeIn">1 ! = 1</span>`;
         } else if (userValue > 0 && userValue < 51) {
             let displayString = `${this.inputUser.value} ! = `;
             const x = ' x ';
@@ -68,7 +70,9 @@ class Faktorial {
 
             finalString += ` = ${result.toLocaleString('id-ID')}`;
 
-            element.innerText = finalString;
+            const span = /* html */ `<span class="animate__animated animate__fadeIn">${finalString}</span>`;
+
+            this.boxExp.innerHTML = span;
         }
     }
 }
@@ -86,16 +90,17 @@ buttonFaktorial.addEventListener('click', function () {
         buttonFaktorial
     );
 
-    faktorial.displayFaktorial(document.querySelector('.explaination-faktorial'));
+    faktorial.displayFaktorial();
 });
 
 document.addEventListener('click', function (event) {
     if (event.target.classList.contains('close')) {
         document.querySelector('#input-faktorial').value = '';
         buttonFaktorial.disabled = false;
+
+        faktorial.boxExp.innerText = '';
     }
 });
 
 /* ---------------------------------------------------- COPYRIGHT --------------------------------------------------- */
-const currentYear = new Date().getFullYear();
-document.querySelector('span.copy-right').innerText = currentYear;
+getCurrentYear(document.querySelector('span.copy-right'));
