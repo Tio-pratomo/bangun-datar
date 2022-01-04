@@ -1,10 +1,6 @@
 import TwoDimensional from '../two-dimentional.js';
 
 class Cube extends TwoDimensional {
-    constructor(boxExp, element, inputUser) {
-        super(boxExp, element, inputUser);
-    }
-
     #processInputValue() {
         const [sideS] = this.inputUser;
         const s = Number(sideS.value).toLocaleString('id-ID');

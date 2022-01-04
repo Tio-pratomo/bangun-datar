@@ -129,7 +129,7 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="circle">Masukkan jari-jarinya (r)</label>
+                                        <label for="circle">nilai jari-jari (r)</label>
                                         <div class="input-group-append">
                                             <input
                                                 class="form-control mr-3"
@@ -179,7 +179,7 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="square">Masukkan sisi nya</label>
+                                        <label for="square">nilai sisi (s)</label>
                                         <div class="input-group-append">
                                             <input
                                                 class="form-control mr-3"
@@ -234,7 +234,7 @@
 
                                     <div class="form-group row">
                                         <div class="col-md-6">
-                                            <label for="number-width">Masukkan Panjang</label>
+                                            <label for="number-width">nilai panjang (P)</label>
                                             <input
                                                 class="form-control"
                                                 type="number"
@@ -245,7 +245,7 @@
                                         </div>
 
                                         <div class="col-md-6">
-                                            <label for="number-height" class="mt-3 mt-md-0">Masukkan Lebar</label>
+                                            <label for="number-height" class="mt-3 mt-md-0">nilai lebar (L)</label>
                                             <input
                                                 class="form-control"
                                                 type="number"
@@ -298,7 +298,7 @@
 
                                     <div class="form-group triangle row">
                                         <div class="col-md-6">
-                                            <label for="triangle-base">Masukkan Alasnya (a)</label>
+                                            <label for="triangle-base">nilai alas (a)</label>
                                             <input
                                                 class="form-control"
                                                 type="number"
@@ -307,7 +307,7 @@
                                                 min="0"
                                             />
 
-                                            <label for="triangle-height" class="mt-3">Masukkan Tingginya (t)</label>
+                                            <label for="triangle-height" class="mt-3">nilai tinggi (t)</label>
                                             <input
                                                 class="form-control"
                                                 type="number"
@@ -318,7 +318,7 @@
                                         </div>
 
                                         <div class="col-md-6">
-                                            <label for="triangle-side-b" class="mt-3 mt-md-0">Masukkan Sisi (b)</label>
+                                            <label for="triangle-side-b" class="mt-3 mt-md-0">nilai sisi (b)</label>
                                             <input
                                                 class="form-control"
                                                 type="number"
@@ -327,7 +327,7 @@
                                                 min="0"
                                             />
 
-                                            <label for="triangle-side-c" class="mt-3">Masukkan Sisi (c)</label>
+                                            <label for="triangle-side-c" class="mt-3">nilai sisi (c)</label>
                                             <input
                                                 class="form-control"
                                                 type="number"
@@ -385,7 +385,7 @@
 
                                     <div class="form-group row trapezoid">
                                         <div class="col-md-6">
-                                            <label for="trapezoid-a">Masukkan Sisi Bawah (a)</label>
+                                            <label for="trapezoid-a">nilai sisi bawah (a)</label>
                                             <input
                                                 class="form-control"
                                                 type="number"
@@ -394,7 +394,7 @@
                                                 min="0"
                                             />
 
-                                            <label for="trapezoid-height" class="mt-3">Masukkan Tingginya (t)</label>
+                                            <label for="trapezoid-height" class="mt-3">nilai tinggi (t)</label>
                                             <input
                                                 class="form-control"
                                                 type="number"
@@ -406,7 +406,7 @@
 
                                         <div class="col-md-6">
                                             <label for="trapezoid-side-b" class="mt-3 mt-md-0">
-                                                Masukkan Sisi Atas (b)
+                                                nilai sisi atas (b)
                                             </label>
                                             <input
                                                 class="form-control"
@@ -416,7 +416,7 @@
                                                 min="0"
                                             />
 
-                                            <label for="trapezoid-side-c" class="mt-3">Masukkan Sisi Miring (c)</label>
+                                            <label for="trapezoid-side-c" class="mt-3">nilai sisi miring (c)</label>
                                             <input
                                                 class="form-control"
                                                 type="number"
@@ -472,35 +472,43 @@
                                         </div>
                                     </div>
 
-                                    <div class="form-group mt-3 parallelogram">
-                                        <label for="parallelogram-a">Masukkan Sisi Panjang (a atau c)</label>
-                                        <input
-                                            class="form-control"
-                                            type="number"
-                                            name="parallelogram-a"
-                                            id="parallelogram-a"
-                                            min="0"
-                                        />
+                                    <div class="form-group row mt-3">
+                                        <div class="col-md-4">
+                                            <label for="parallelogram-a">nilai sisi (a) atau (c)</label>
+                                            <input
+                                                class="form-control"
+                                                type="number"
+                                                name="parallelogram-a"
+                                                id="parallelogram-a"
+                                                min="0"
+                                            />
+                                        </div>
 
-                                        <label for="parallelogram-height" class="mt-3">Masukkan Tingginya (t)</label>
-                                        <input
-                                            class="form-control"
-                                            type="number"
-                                            name="parallelogram-height"
-                                            id="parallelogram-height"
-                                            min="0"
-                                        />
+                                        <div class="col-md-4">
+                                            <label for="parallelogram-height">nilai tinggi (t)</label>
+                                            <input
+                                                class="form-control"
+                                                type="number"
+                                                name="parallelogram-height"
+                                                id="parallelogram-height"
+                                                min="0"
+                                            />
+                                        </div>
 
-                                        <label for="parallelogram-b" class="mt-3">Masukkan Sisi Lebar (b atau d)</label>
-                                        <input
-                                            class="form-control"
-                                            type="number"
-                                            name="parallelogram-b"
-                                            id="parallelogram-b"
-                                            min="0"
-                                        />
+                                        <div class="col-md-4">
+                                            <label for="parallelogram-b">nilai sisi (b) atau (d)</label>
+                                            <input
+                                                class="form-control"
+                                                type="number"
+                                                name="parallelogram-b"
+                                                id="parallelogram-b"
+                                                min="0"
+                                            />
+                                        </div>
 
-                                        <button class="btn bc-purple text-light mt-3 parallelogram">Hitung</button>
+                                        <div class="col-md-3 mt-3">
+                                            <button class="btn bc-purple text-light parallelogram">Hitung</button>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -543,35 +551,43 @@
                                         </div>
                                     </div>
 
-                                    <div class="form-group mt-3">
-                                        <label for="rhombus-d1">Masukkan diagonal 1</label>
-                                        <input
-                                            class="form-control"
-                                            type="number"
-                                            name="rhombus-d1"
-                                            id="rhombus-d1"
-                                            min="0"
-                                        />
+                                    <div class="form-group row mt-3">
+                                        <div class="col-md-4">
+                                            <label for="rhombus-d1">nilai diagonal 1</label>
+                                            <input
+                                                class="form-control"
+                                                type="number"
+                                                name="rhombus-d1"
+                                                id="rhombus-d1"
+                                                min="0"
+                                            />
+                                        </div>
 
-                                        <label for="rhombus-d2" class="mt-3">Masukkan Diagonal 2</label>
-                                        <input
-                                            class="form-control"
-                                            type="number"
-                                            name="rhombus-d2"
-                                            id="rhombus-d2"
-                                            min="0"
-                                        />
+                                        <div class="col-md-4">
+                                            <label for="rhombus-d2">nilai diagonal 2</label>
+                                            <input
+                                                class="form-control"
+                                                type="number"
+                                                name="rhombus-d2"
+                                                id="rhombus-d2"
+                                                min="0"
+                                            />
+                                        </div>
 
-                                        <label for="rhombus-s" class="mt-3">Masukkan Sisi-nya (s)</label>
-                                        <input
-                                            class="form-control"
-                                            type="number"
-                                            name="rhombus-s"
-                                            id="rhombus-s"
-                                            min="0"
-                                        />
+                                        <div class="col-md-4">
+                                            <label for="rhombus-s">nilai sisi (s)</label>
+                                            <input
+                                                class="form-control"
+                                                type="number"
+                                                name="rhombus-s"
+                                                id="rhombus-s"
+                                                min="0"
+                                            />
+                                        </div>
 
-                                        <button class="btn bc-purple text-light mt-3 rhombus">Hitung</button>
+                                        <div class="col-md-3 mt-3">
+                                            <button class="btn bc-purple text-light rhombus">Hitung</button>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -616,7 +632,7 @@
 
                                     <div class="form-group row">
                                         <div class="col-md-6">
-                                            <label for="kite-d1">Masukkan diagonal 1</label>
+                                            <label for="kite-d1">nilai diagonal 1</label>
                                             <input
                                                 class="form-control"
                                                 type="number"
@@ -625,7 +641,7 @@
                                                 min="0"
                                             />
 
-                                            <label for="kite-d2" class="mt-3">Masukkan diagonal 2</label>
+                                            <label for="kite-d2" class="mt-3">nilai diagonal 2</label>
                                             <input
                                                 class="form-control"
                                                 type="number"
@@ -636,7 +652,7 @@
                                         </div>
 
                                         <div class="col-md-6">
-                                            <label for="kite-a" class="mt-3 mt-md-0">Masukkan Sisi (a)</label>
+                                            <label for="kite-a" class="mt-3 mt-md-0">nilai sisi (a)</label>
                                             <input
                                                 class="form-control"
                                                 type="number"
@@ -645,7 +661,7 @@
                                                 min="0"
                                             />
 
-                                            <label for="kite-b" class="mt-3">Masukkan Sisi (b)</label>
+                                            <label for="kite-b" class="mt-3">nilai sisi (b)</label>
                                             <input
                                                 class="form-control"
                                                 type="number"

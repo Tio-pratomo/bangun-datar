@@ -31,7 +31,7 @@ class Parallelogram extends TwoDimensional {
         const [perimeter1, perimeter2] = elements;
         const data = this.#processInputValue();
 
-        perimeter1.innerText = `Keliling = ${data.a} + ${data.b} ${data.a} + ${data.b}`;
+        perimeter1.innerText = `Keliling = ${data.a} + ${data.b} + ${data.a} + ${data.b}`;
         perimeter2.innerText = `Keliling = ${data.perimeter}`;
     }
 }
