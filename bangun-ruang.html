@@ -126,7 +126,7 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="cube">Masukkan sisi-nya (s)</label>
+                                        <label for="cube">nilai sisi (s)</label>
                                         <div class="input-group-append">
                                             <input
                                                 class="form-control mr-3"
@@ -142,11 +142,91 @@
 
                                 <div class="col-md-6 px-4 explaination-cube"></div>
                             </div>
-                            <!--* END FORMULA, INPUT USER, IMAGE FORM CIRCLE -->
+                            <!--* END FORMULA, INPUT USER, IMAGE FORM CUBE -->
                         </div>
                     </div>
                 </div>
-                <!-- --------------------------------------------- END CIRCLE SECTION ---------------------------------------------- -->
+                <!-- --------------------------------------------- END CUBE SECTION ---------------------------------------------- -->
+                <!-- ----------------------------------------- START BEAM ------------------------------------------ -->
+                <div class="row mt-5">
+                    <div class="col-md-12">
+                        <div class="box-container container-fluid">
+                            <!-- *HEADING BEAM -->
+                            <div class="row">
+                                <div class="col-md-12 py-2">
+                                    <h3 class="c-purple">Balok</h3>
+                                </div>
+                            </div>
+                            <!--* END HEADING BEAM -->
+
+                            <!--* FORMULA, INPUT USER, IMAGE FORM BEAM -->
+                            <div class="row">
+                                <div class="col-md-6 px-4 border border-danger rounded">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <p class="font-weight-bold my-3">Rumus Balok</p>
+                                            <p>Volume = p x l x t</p>
+                                            <p>Luas Permukaan = ( 2 x p x l ) + (2 x l x t) + ( 2 x p x t )</p>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <img class="my-3 img-fluid" src="assets/img/Balok.png" alt="Balok" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <div class="col-md-4 p-1">
+                                            <label for="beam-p">nilai sisi (p)</label>
+                                            <div class="input-group-append">
+                                                <input
+                                                    class="form-control mr-3"
+                                                    type="number"
+                                                    name="beam-p"
+                                                    id="beam-p"
+                                                    min="0"
+                                                />
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4 p-1">
+                                            <label for="beam-l">nilai sisi (l)</label>
+                                            <div class="input-group-append">
+                                                <input
+                                                    class="form-control mr-3"
+                                                    type="number"
+                                                    name="beam-l"
+                                                    id="beam-l"
+                                                    min="0"
+                                                />
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4 p-1">
+                                            <label for="beam-t">nilai sisi (t)</label>
+                                            <div class="input-group-append">
+                                                <input
+                                                    class="form-control mr-3"
+                                                    type="number"
+                                                    name="beam-t"
+                                                    id="beam-t"
+                                                    min="0"
+                                                />
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4 p-1 mt-3">
+                                            <button class="btn bc-purple text-light beam">Hitung</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 px-4 explaination-beam"></div>
+                            </div>
+                            <!--* END FORMULA, INPUT USER, IMAGE FORM BEAM -->
+                        </div>
+                    </div>
+                </div>
+                <!-- ------------------------------------------ END BEAM ------------------------------------------- -->
             </div>
         </main>
 
