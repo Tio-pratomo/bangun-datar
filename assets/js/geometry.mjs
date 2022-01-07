@@ -1,7 +1,8 @@
 import Cube from './three-dimension/cube.js';
+import Beam from './three-dimension/beam.js';
+import Tube from './three-dimension/tube.js';
 
 import { getCurrentYear, expElement } from './misc.js';
-import Beam from './three-dimension/beam.js';
 
 /* ---------------------------------------------------- COPYRIGHT --------------------------------------------------- */
 getCurrentYear(document.querySelector('.copy-right'));
@@ -35,5 +36,27 @@ buttonBeam.addEventListener('click', function () {
         document.querySelector('.beam-2'),
         document.querySelector('.beam-3'),
         document.querySelector('.beam-4')
+    );
+});
+
+/* -------------------------------------------------- SECTION TUBE -------------------------------------------------- */
+const tube = new Tube(document.querySelector('.explaination-tube'), expElement('tube', 6), [
+    document.querySelector('#tube-r'),
+    document.querySelector('#tube-t'),
+]);
+
+const buttonTube = document.querySelector('button.tube');
+buttonTube.addEventListener('click', function () {
+    tube.sanitizeInputUser();
+    tube.displayCalculate();
+    tube.displayVolumeOfTube(
+        document.querySelector('.tube-0'),
+        document.querySelector('.tube-1'),
+        document.querySelector('.tube-2')
+    );
+    tube.displayAreaOfTube(
+        document.querySelector('.tube-3'),
+        document.querySelector('.tube-4'),
+        document.querySelector('.tube-5')
     );
 });
