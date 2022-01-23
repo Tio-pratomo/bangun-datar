@@ -16,7 +16,7 @@ const expElement = function (name, numberOfLi) {
     }
 
     const ul = /* html */ `
-    <ul class="list-group list-group-flush animate__animated animate__fadeIn">
+    <ul class="list-group list-group-flush fade-in">
         ${li}
     </ul>
     `;

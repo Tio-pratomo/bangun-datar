@@ -83,3 +83,18 @@ span.text-monospace {
 span.result-faktorial {
     margin-left: 6px;
 }
+
+.fade-in {
+    animation: fadeIn 0.7s ease-in;
+    -webkit-animation: fadeIn 0.7s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

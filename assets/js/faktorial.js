@@ -46,9 +46,9 @@ class Faktorial {
         const userValue = Number(this.inputUser.value);
 
         if (userValue === 0) {
-            this.boxExp.innerHTML = /* html */ `<span class="animate__animated animate__fadeIn">0 ! = 1</span>`;
+            this.boxExp.innerHTML = /* html */ `<span class="fade-in">0 ! = 1</span>`;
         } else if (userValue === 1) {
-            this.boxExp.innerHTML = /* html */ `<span class="animate__animated animate__fadeIn">1 ! = 1</span>`;
+            this.boxExp.innerHTML = /* html */ `<span class="fade-in">1 ! = 1</span>`;
         } else if (userValue > 0 && userValue < 51) {
             let displayString = `${this.inputUser.value} ! = `;
             const x = ' x ';
@@ -70,7 +70,7 @@ class Faktorial {
 
             finalString += ` = ${result.toLocaleString('id-ID')}`;
 
-            const span = /* html */ `<span class="animate__animated animate__fadeIn">${finalString}</span>`;
+            const span = /* html */ `<span class="fade-in">${finalString}</span>`;
 
             this.boxExp.innerHTML = span;
         }
