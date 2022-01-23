@@ -1,10 +1,6 @@
 import TwoDimensional from '../two-dimentional.js';
 
 class Kite extends TwoDimensional {
-    constructor(boxExp, element, inputUser) {
-        super(boxExp, element, inputUser);
-    }
-
     #processInputValue() {
         const [diag1, diag2, sideA, sideB] = this.inputUser;
         const d1 = Number(diag1.value).toLocaleString('id-ID');

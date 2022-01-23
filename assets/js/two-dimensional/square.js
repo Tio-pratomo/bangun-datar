@@ -1,10 +1,6 @@
 import TwoDimensional from '../two-dimentional.js';
 
 class Square extends TwoDimensional {
-    constructor(boxExp, element, inputUser) {
-        super(boxExp, element, inputUser);
-    }
-
     displayAreaOfSquare(...elements) {
         const [lateral] = this.inputUser;
         const [area1, area2] = elements;

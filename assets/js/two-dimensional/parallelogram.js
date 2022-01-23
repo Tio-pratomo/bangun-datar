@@ -1,10 +1,6 @@
 import TwoDimensional from '../two-dimentional.js';
 
 class Parallelogram extends TwoDimensional {
-    constructor(boxExp, element, inputUser) {
-        super(boxExp, element, inputUser);
-    }
-
     #processInputValue() {
         const [inputA, inputHeight, inputB] = this.inputUser;
         const a = Number(inputA.value).toLocaleString('id-ID');

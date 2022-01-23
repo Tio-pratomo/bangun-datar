@@ -1,10 +1,6 @@
 import TwoDimensional from '../two-dimentional.js';
 
 class Triangle extends TwoDimensional {
-    constructor(boxExp, element, inputUser) {
-        super(boxExp, element, inputUser);
-    }
-
     displayAreaOfTriangle(...elements) {
         const [area1, area2, area3] = elements;
         const [sideA, height, ,] = this.inputUser;

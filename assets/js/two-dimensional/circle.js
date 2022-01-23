@@ -1,10 +1,6 @@
 import TwoDimensional from '../two-dimentional.js';
 
 class Circle extends TwoDimensional {
-    constructor(boxExp, element, inputUser) {
-        super(boxExp, element, inputUser);
-    }
-
     displayAreaOfCircle(...elements) {
         const [area1, area2] = elements;
         const [circleRadius] = this.inputUser;

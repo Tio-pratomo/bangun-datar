@@ -1,10 +1,6 @@
 import TwoDimensional from '../two-dimentional.js';
 
 class Rectangle extends TwoDimensional {
-    constructor(boxExp, element, inputUser) {
-        super(boxExp, element, inputUser);
-    }
-
     displayAreaOfRectangle(...elements) {
         const [width, height] = this.inputUser;
         const [area1, area2] = elements;
