@@ -67,6 +67,11 @@ footer p {
     font-size: 0.875rem;
 }
 
+svg {
+    width: 36px;
+    height: 36px;
+}
+
 /* 
     SECTION FAKTORIAL
 */
