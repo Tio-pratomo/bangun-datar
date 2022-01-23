@@ -1,4 +1,9 @@
 class TwoDimensional {
+    /* 
+        boxExp berupa element container penjelasan perhitungan.
+        element berupa element list yang menjelaskan isinya ketika tombol di klik
+        input user harus berupa array untuk kebutuhan sanitasi input user dan data-data lainnnya.
+    */
     constructor(boxExp, element, inputUser) {
         this.boxExp = boxExp;
         this.element = element;
