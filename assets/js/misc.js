@@ -6,7 +6,7 @@ const getCurrentYear = function (element) {
 
 /* 
     FUNCTION FOR EXPLAINATION ELEMENT
-    NEED 2 ARGUMENT NAME OF TWO DIMENSIONAL , NEED NUMBER OFELEMENT LI
+    NEED 2 ARGUMENT -> NAME OF TWO DIMENSIONAL OR GEOMETRY NEED NUMBER OF ELEMENT LI
 */
 const expElement = function (name, numberOfLi) {
     let li = '';
