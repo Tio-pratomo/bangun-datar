@@ -2,6 +2,7 @@ import Cube from './three-dimension/cube.js';
 import Beam from './three-dimension/beam.js';
 import Tube from './three-dimension/tube.js';
 import Cone from './three-dimension/cone.js';
+import Ball from './three-dimension/ball.js';
 
 import { getCurrentYear, expElement } from './misc.js';
 
@@ -82,5 +83,26 @@ buttonCone.addEventListener('click', function () {
         document.querySelector('.cone-3'),
         document.querySelector('.cone-4'),
         document.querySelector('.cone-5')
+    );
+});
+
+/* -------------------------------------------------- SECTION BALL -------------------------------------------------- */
+const ball = new Ball(document.querySelector('.explaination-ball'), expElement('ball', 6), [
+    document.querySelector('#ball'),
+]);
+
+const buttonBall = document.querySelector('button.ball');
+buttonBall.addEventListener('click', function () {
+    ball.sanitizeInputUser();
+    ball.displayCalculate();
+    ball.displayVolumeOfBall(
+        document.querySelector('.ball-0'),
+        document.querySelector('.ball-1'),
+        document.querySelector('.ball-2')
+    );
+    ball.displayAreaOfBall(
+        document.querySelector('.ball-3'),
+        document.querySelector('.ball-4'),
+        document.querySelector('.ball-5')
     );
 });
