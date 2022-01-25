@@ -72,6 +72,10 @@ svg {
     height: 2rem;
 }
 
+path {
+    width: 100%;
+}
+
 /* 
     SECTION FAKTORIAL
 */
