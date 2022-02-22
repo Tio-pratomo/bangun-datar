@@ -4,10 +4,23 @@ import Tube from './three-dimension/tube.js';
 import Cone from './three-dimension/cone.js';
 import Ball from './three-dimension/ball.js';
 
-import { getCurrentYear, expElement } from './misc.js';
+import { getCurrentYear, expElement, openSideBar, closingSideBar } from './misc.js';
 
 /* ---------------------------------------------------- COPYRIGHT --------------------------------------------------- */
 getCurrentYear(document.querySelector('.copy-right'));
+
+/* ------------------------------------------------- OPEN SIDE BAR ------------------------------------------------- */
+
+const sideBar = document.querySelector('.open-bar');
+sideBar.addEventListener('click', function () {
+    openSideBar(document.querySelector('.side-nav'));
+});
+
+/* ------------------------------------------------- CLOSE SIDE BAR ------------------------------------------------- */
+const closeSideBar = document.querySelector('.close');
+closeSideBar.addEventListener('click', function () {
+    closingSideBar(document.querySelector('.side-nav'));
+});
 
 /* -------------------------------------------------- SECTION CUBE -------------------------------------------------- */
 const cube = new Cube(document.querySelector('.explaination-cube'), expElement('cube', 4), [

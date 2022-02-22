@@ -24,4 +24,16 @@ const expElement = function (name, numberOfLi) {
     return ul;
 };
 
-export { getCurrentYear, expElement };
+/* 
+OPEN SIDE BAR
+*/
+
+function openSideBar(element) {
+    element.style.width = '200px';
+}
+
+function closingSideBar(element) {
+    element.style.width = '0';
+}
+
+export { getCurrentYear, expElement, openSideBar, closingSideBar };

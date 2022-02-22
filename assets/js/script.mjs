@@ -6,10 +6,23 @@ import Trapezoid from './two-dimensional/trapezoid.js';
 import Parallelogram from './two-dimensional/parallelogram.js';
 import Rhombus from './two-dimensional/rhombus.js';
 import Kite from './two-dimensional/kite.js';
-import { getCurrentYear, expElement } from './misc.js';
+import { getCurrentYear, expElement, openSideBar, closingSideBar } from './misc.js';
 
 /* ---------------------------------------------------- COPYRIGHT --------------------------------------------------- */
 getCurrentYear(document.querySelector('.copy-right'));
+
+/* ------------------------------------------------- OPEN SIDE BAR ------------------------------------------------- */
+
+const sideBar = document.querySelector('.open-bar');
+sideBar.addEventListener('click', function () {
+    openSideBar(document.querySelector('.side-nav'));
+});
+
+/* ------------------------------------------------- CLOSE SIDE BAR ------------------------------------------------- */
+const closeSideBar = document.querySelector('.close');
+closeSideBar.addEventListener('click', function () {
+    closingSideBar(document.querySelector('.side-nav'));
+});
 
 /* ------------------------------------------------- SECTION CIRCLE ------------------------------------------------- */
 const circle = new Circle(document.querySelector('.explaination-circle'), expElement('circle', 4), [
