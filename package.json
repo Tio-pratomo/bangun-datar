@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "ini merupakan project menghitung luas bangun datar, dimana kita dapat memasukkan input kemudian kalkulasi hitungannya",
     "scripts": {
+        "prestart": "rm -r dist",
         "start": "parcel ./*.html",
         "build": "rm -rf dist/* && parcel build ./*.html --public-url ./",
         "deploy": "gh-pages -d dist"
