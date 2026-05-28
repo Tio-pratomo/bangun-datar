@@ -12,8 +12,8 @@ export default function Navbar({ currentPage, setPage }) {
   ];
 
   return (
-    <div className="max-w-7xl mx-auto px-6">
-      <nav className="bg-white dark:bg-gray-800 shadow p-4 flex justify-between items-center relative">
+    <div className="sticky top-0 z-50 max-w-7xl mx-auto px-6">
+      <nav className="bg-white/70 dark:bg-gray-800/70 backdrop-blur-md shadow-sm p-4 flex justify-between items-center relative">
         <div className="font-bold text-xl dark:text-white">Kalkulator</div>
         
         <button
@@ -23,7 +23,7 @@ export default function Navbar({ currentPage, setPage }) {
           {isOpen ? "✕" : "☰"}
         </button>
 
-        <div className={`${isOpen ? "flex" : "hidden"} md:flex flex-col md:flex-row absolute md:static top-full left-0 w-full md:w-auto bg-white dark:bg-gray-800 md:bg-transparent shadow-md md:shadow-none p-4 md:p-0 gap-2 z-10`}>
+        <div className={`${isOpen ? "flex" : "hidden"} md:flex flex-col md:flex-row absolute md:static top-full left-0 w-full md:w-auto bg-white/90 dark:bg-gray-800/90 backdrop-blur-lg md:bg-transparent shadow-md md:shadow-none p-4 md:p-0 gap-2 z-10 items-end`}>
           {pages.map((p) => (
             <button
               key={p.id}
@@ -31,9 +31,9 @@ export default function Navbar({ currentPage, setPage }) {
                 setPage(p.id);
                 setIsOpen(false);
               }}
-              className={`px-4 py-2 rounded transition-colors ${
+              className={`px-4 py-2 rounded-full transition-all ${
                 currentPage === p.id
-                  ? "bg-blue-500 text-white"
+                  ? "bg-blue-600 text-white shadow-lg"
                   : "text-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-700"
               }`}
             >
@@ -42,7 +42,7 @@ export default function Navbar({ currentPage, setPage }) {
           ))}
           <button
             onClick={() => setDarkMode(!darkMode)}
-            className="px-4 py-2 rounded bg-gray-200 dark:bg-gray-600 dark:text-white"
+            className="px-4 py-2 rounded-full bg-gray-200 dark:bg-gray-600 dark:text-white transition-colors"
           >
             {darkMode ? "☀️ Light" : "🌙 Dark"}
           </button>
