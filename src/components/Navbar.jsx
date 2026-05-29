@@ -11,9 +11,48 @@ export default function Navbar({ currentPage, setPage }) {
     { id: "konversi-satuan", label: "Konversi Satuan" },
   ];
 
+  const getNavBtnClass = (id) =>
+    currentPage === id
+      ? "bg-blue-100 text-blue-900 font-semibold dark:bg-blue-900/40 dark:text-blue-300"
+      : "text-gray-700 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700";
+
+  const drawerIcon = (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="currentColor"
+      className="size-6"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+      />
+    </svg>
+  );
+
+  const closeIcon = (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth="1.5"
+      stroke="currentColor"
+      className="size-6"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M6 18 18 6M6 6l12 12"
+      />
+    </svg>
+  );
+
   return (
-    <div className="sticky top-0 z-50 max-w-full mx-auto">
-      <div className="navbar relative overflow-visible bg-base-100/80 dark:bg-gray-800/80 backdrop-blur-md shadow-sm">
+    <div className="sticky top-0 z-50 w-full">
+      <div className="navbar relative overflow-visible px-3 md:px-6 lg:px-17.5 bg-base-100/80 dark:bg-gray-800/80 text-base-content dark:text-white backdrop-blur-md shadow-sm">
         <div className="navbar-start">
           <div className="relative md:hidden">
             <button
@@ -24,7 +63,7 @@ export default function Navbar({ currentPage, setPage }) {
               aria-expanded={isOpen}
               aria-controls="mobile-nav-menu"
             >
-              {isOpen ? "✕" : "☰"}
+              {isOpen ? closeIcon : drawerIcon}
             </button>
             <div
               id="mobile-nav-menu"
@@ -42,7 +81,7 @@ export default function Navbar({ currentPage, setPage }) {
                         setPage(p.id);
                         setIsOpen(false);
                       }}
-                      className={currentPage === p.id ? "active" : ""}
+                      className={getNavBtnClass(p.id)}
                     >
                       {p.label}
                     </button>
@@ -58,7 +97,7 @@ export default function Navbar({ currentPage, setPage }) {
             }}
             className="btn btn-ghost text-xl normal-case dark:text-white"
           >
-            Kalkulator
+            Calc
           </button>
         </div>
 
@@ -68,7 +107,7 @@ export default function Navbar({ currentPage, setPage }) {
               <li key={p.id}>
                 <button
                   onClick={() => setPage(p.id)}
-                  className={currentPage === p.id ? "active" : ""}
+                  className={getNavBtnClass(p.id)}
                 >
                   {p.label}
                 </button>

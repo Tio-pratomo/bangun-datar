@@ -365,7 +365,7 @@ export default function BangunRuang() {
 
     return (
       <div className="bg-white dark:bg-gray-700 p-4 rounded shadow">
-        <p className="text-lg dark:text-white">
+        <p className="text-lg text-gray-900 dark:text-gray-100">
           Kalkulator {activeShape?.label} (akan datang)
         </p>
       </div>
@@ -374,7 +374,7 @@ export default function BangunRuang() {
 
   return (
     <div className="p-6">
-      <h2 className="text-2xl font-bold mb-4">Bangun Ruang</h2>
+      <h2 className="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-100">Bangun Ruang</h2>
       <div className="flex flex-wrap gap-4 mb-6">
         {shapes.map((s) => (
           <button

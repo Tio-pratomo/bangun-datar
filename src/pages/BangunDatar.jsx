@@ -65,7 +65,9 @@ export default function BangunDatar() {
 
   return (
     <div className="p-4 w-full mx-auto">
-      <h2 className="text-2xl font-bold mb-4">Bangun Datar</h2>
+      <h2 className="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-100">
+        Bangun Datar
+      </h2>
       <div className="flex flex-wrap gap-2 mb-6 ">
         {shapes.map((s) => (
           <button
