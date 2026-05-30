@@ -1,0 +1,272 @@
+{
+  "/media/sulis/Local Disk/Progamming/PROJECT_WEBSITE/mini_project_membuat_perhitungan_bangun_datar/package.json": {
+    "mtime": 1779984612.1385427,
+    "ast_hash": "2bc3d39135e280d834e50ded8697faa9",
+    "semantic_hash": "2bc3d39135e280d834e50ded8697faa9"
+  },
+  "/media/sulis/Local Disk/Progamming/PROJECT_WEBSITE/mini_project_membuat_perhitungan_bangun_datar/skills-lock.json": {
+    "mtime": 1779703184.4284685,
+    "ast_hash": "cd4e1a40cfae0a6064d9ba0472acf996",
+    "semantic_hash": "cd4e1a40cfae0a6064d9ba0472acf996"
+  },
+  "/media/sulis/Local Disk/Progamming/PROJECT_WEBSITE/mini_project_membuat_perhitungan_bangun_datar/vite.config.js": {
+    "mtime": 1779701941.273884,
+    "ast_hash": "3b70a0b92236b6884dda15346af7cb25",
+    "semantic_hash": "3b70a0b92236b6884dda15346af7cb25"
+  },
+  "/media/sulis/Local Disk/Progamming/PROJECT_WEBSITE/mini_project_membuat_perhitungan_bangun_datar/.opencode/opencode.json": {
+    "mtime": 1780113258.0183237,
+    "ast_hash": "e5f74d14a81702b55bdf53b33ec991d7",
+    "semantic_hash": "e5f74d14a81702b55bdf53b33ec991d7"
+  },
+  "/media/sulis/Local Disk/Progamming/PROJECT_WEBSITE/mini_project_membuat_perhitungan_bangun_datar/.opencode/package.json": {
+    "mtime": 1780113312.4278548,
+    "ast_hash": "a20ea4dc284bd8c67458f0325b1fa68c",
+    "semantic_hash": "a20ea4dc284bd8c67458f0325b1fa68c"
+  },
+  "/media/sulis/Local Disk/Progamming/PROJECT_WEBSITE/mini_project_membuat_perhitungan_bangun_datar/.opencode/plugins/graphify.js": {
+    "mtime": 1780113209.0359902,
+    "ast_hash": "64ccd3c03dbfe0980b6095766f5c4e52",
+    "semantic_hash": "64ccd3c03dbfe0980b6095766f5c4e52"
+  },
+  "/media/sulis/Local Disk/Progamming/PROJECT_WEBSITE/mini_project_membuat_perhitungan_bangun_datar/src/App.jsx": {
+    "mtime": 1779779298.795619,
+    "ast_hash": "91d2cf05483cdc069f2654ec781c17dd",
+    "semantic_hash": "91d2cf05483cdc069f2654ec781c17dd"
+  },
+  "/media/sulis/Local Disk/Progamming/PROJECT_WEBSITE/mini_project_membuat_perhitungan_bangun_datar/src/main.jsx": {
+    "mtime": 1779701941.288417,
+    "ast_hash": "28335e1065818669528660afd9efbd8f",
+    "semantic_hash": "28335e1065818669528660afd9efbd8f"
+  },
+  "/media/sulis/Local Disk/Progamming/PROJECT_WEBSITE/mini_project_membuat_perhitungan_bangun_datar/src/components/Navbar.jsx": {
+    "mtime": 1780062771.904496,
+    "ast_hash": "01d7c238da1f4703362ee47773e84f6c",
+    "semantic_hash": "01d7c238da1f4703362ee47773e84f6c"
+  },
+  "/media/sulis/Local Disk/Progamming/PROJECT_WEBSITE/mini_project_membuat_perhitungan_bangun_datar/src/components/shapes/BelahKetupat.jsx": {
+    "mtime": 1779775294.2738817,
+    "ast_hash": "da550f768601d6472cd6621f26458f41",
+    "semantic_hash": "da550f768601d6472cd6621f26458f41"
+  },
+  "/media/sulis/Local Disk/Progamming/PROJECT_WEBSITE/mini_project_membuat_perhitungan_bangun_datar/src/components/shapes/JajarGenjang.jsx": {
+    "mtime": 1779775294.2715633,
+    "ast_hash": "e22839f280392ec10147542d875e80e1",
+    "semantic_hash": "e22839f280392ec10147542d875e80e1"
+  },
+  "/media/sulis/Local Disk/Progamming/PROJECT_WEBSITE/mini_project_membuat_perhitungan_bangun_datar/src/components/shapes/LayangLayang.jsx": {
+    "mtime": 1779775294.2722466,
+    "ast_hash": "bb33c8a1e9e1dcab51557d701585f1ff",
+    "semantic_hash": "bb33c8a1e9e1dcab51557d701585f1ff"
+  },
+  "/media/sulis/Local Disk/Progamming/PROJECT_WEBSITE/mini_project_membuat_perhitungan_bangun_datar/src/components/shapes/Lingkaran.jsx": {
+    "mtime": 1779775294.2701075,
+    "ast_hash": "9b2cf600c68464581de17f77257a2321",
+    "semantic_hash": "9b2cf600c68464581de17f77257a2321"
+  },
+  "/media/sulis/Local Disk/Progamming/PROJECT_WEBSITE/mini_project_membuat_perhitungan_bangun_datar/src/components/shapes/Persegi.jsx": {
+    "mtime": 1779775294.2471578,
+    "ast_hash": "3ca2862808bcbe769c91f74484e59ff9",
+    "semantic_hash": "3ca2862808bcbe769c91f74484e59ff9"
+  },
+  "/media/sulis/Local Disk/Progamming/PROJECT_WEBSITE/mini_project_membuat_perhitungan_bangun_datar/src/components/shapes/PersegiPanjang.jsx": {
+    "mtime": 1779775294.2477458,
+    "ast_hash": "5d208f3ac4fc836ca9609410b1faf389",
+    "semantic_hash": "5d208f3ac4fc836ca9609410b1faf389"
+  },
+  "/media/sulis/Local Disk/Progamming/PROJECT_WEBSITE/mini_project_membuat_perhitungan_bangun_datar/src/components/shapes/Segitiga.jsx": {
+    "mtime": 1779775294.2727814,
+    "ast_hash": "64a42d35f59021006fe6d2f5d1216b4a",
+    "semantic_hash": "64a42d35f59021006fe6d2f5d1216b4a"
+  },
+  "/media/sulis/Local Disk/Progamming/PROJECT_WEBSITE/mini_project_membuat_perhitungan_bangun_datar/src/components/shapes/ShapeInput.jsx": {
+    "mtime": 1779775294.2442453,
+    "ast_hash": "e71df7e5596f0632e76c62f7005f7ec3",
+    "semantic_hash": "e71df7e5596f0632e76c62f7005f7ec3"
+  },
+  "/media/sulis/Local Disk/Progamming/PROJECT_WEBSITE/mini_project_membuat_perhitungan_bangun_datar/src/components/shapes/ShapeLayout.jsx": {
+    "mtime": 1779775294.2464995,
+    "ast_hash": "a43f35288e75b36c895bc7c4080296a7",
+    "semantic_hash": "a43f35288e75b36c895bc7c4080296a7"
+  },
+  "/media/sulis/Local Disk/Progamming/PROJECT_WEBSITE/mini_project_membuat_perhitungan_bangun_datar/src/components/shapes/Trapesium.jsx": {
+    "mtime": 1779775294.2733293,
+    "ast_hash": "b1ee8aeb9e7370fbad8da6954375c6d4",
+    "semantic_hash": "b1ee8aeb9e7370fbad8da6954375c6d4"
+  },
+  "/media/sulis/Local Disk/Progamming/PROJECT_WEBSITE/mini_project_membuat_perhitungan_bangun_datar/src/context/ThemeContext.jsx": {
+    "mtime": 1779714802.8764908,
+    "ast_hash": "2f3e567f0b73998aa4e051e5118b8a88",
+    "semantic_hash": "2f3e567f0b73998aa4e051e5118b8a88"
+  },
+  "/media/sulis/Local Disk/Progamming/PROJECT_WEBSITE/mini_project_membuat_perhitungan_bangun_datar/src/pages/BangunDatar.jsx": {
+    "mtime": 1780061341.0355446,
+    "ast_hash": "1011ae8ff31295d34a00af83a0d81c04",
+    "semantic_hash": "1011ae8ff31295d34a00af83a0d81c04"
+  },
+  "/media/sulis/Local Disk/Progamming/PROJECT_WEBSITE/mini_project_membuat_perhitungan_bangun_datar/src/pages/BangunRuang.jsx": {
+    "mtime": 1780121656.8390293,
+    "ast_hash": "505b22795b7012185d909621ed52be0a",
+    "semantic_hash": ""
+  },
+  "/media/sulis/Local Disk/Progamming/PROJECT_WEBSITE/mini_project_membuat_perhitungan_bangun_datar/src/pages/KonversiSatuan.jsx": {
+    "mtime": 1780061288.904652,
+    "ast_hash": "cf3109cc57c23d1741fa4d885ef5e934",
+    "semantic_hash": "cf3109cc57c23d1741fa4d885ef5e934"
+  },
+  "/media/sulis/Local Disk/Progamming/PROJECT_WEBSITE/mini_project_membuat_perhitungan_bangun_datar/AGENTS.md": {
+    "mtime": 1780119491.6433902,
+    "ast_hash": "5d652b9e5003bf9a1693c2bcf035c45c",
+    "semantic_hash": ""
+  },
+  "/media/sulis/Local Disk/Progamming/PROJECT_WEBSITE/mini_project_membuat_perhitungan_bangun_datar/CONTEXT.md": {
+    "mtime": 1779701941.2703788,
+    "ast_hash": "2e9eda906b751c8b488f2c08f68a5553",
+    "semantic_hash": "2e9eda906b751c8b488f2c08f68a5553"
+  },
+  "/media/sulis/Local Disk/Progamming/PROJECT_WEBSITE/mini_project_membuat_perhitungan_bangun_datar/index.html": {
+    "mtime": 1779701941.2869332,
+    "ast_hash": "fbc5b9a557840c5e196275db727cac1c",
+    "semantic_hash": "fbc5b9a557840c5e196275db727cac1c"
+  },
+  "/media/sulis/Local Disk/Progamming/PROJECT_WEBSITE/mini_project_membuat_perhitungan_bangun_datar/readme.md": {
+    "mtime": 1638712005.042593,
+    "ast_hash": "1032119c530411889436859730e27215",
+    "semantic_hash": "1032119c530411889436859730e27215"
+  },
+  "/media/sulis/Local Disk/Progamming/PROJECT_WEBSITE/mini_project_membuat_perhitungan_bangun_datar/.opencode/skills/graphify/SKILL.md": {
+    "mtime": 1780113209.0293534,
+    "ast_hash": "3d4dad5e2eeab0b6f73d45dd1e8df0d7",
+    "semantic_hash": "3d4dad5e2eeab0b6f73d45dd1e8df0d7"
+  },
+  "/media/sulis/Local Disk/Progamming/PROJECT_WEBSITE/mini_project_membuat_perhitungan_bangun_datar/docs/development_log.md": {
+    "mtime": 1779980913.1219585,
+    "ast_hash": "555907ec8ad04e66b1a317409f9d962b",
+    "semantic_hash": "555907ec8ad04e66b1a317409f9d962b"
+  },
+  "/media/sulis/Local Disk/Progamming/PROJECT_WEBSITE/mini_project_membuat_perhitungan_bangun_datar/src/img/Balok.png": {
+    "mtime": 1641281579.9807248,
+    "ast_hash": "77f8d36aa6f2b220f726adc8331d9fdd",
+    "semantic_hash": "77f8d36aa6f2b220f726adc8331d9fdd"
+  },
+  "/media/sulis/Local Disk/Progamming/PROJECT_WEBSITE/mini_project_membuat_perhitungan_bangun_datar/src/img/balok.svg": {
+    "mtime": 1779977333.6944797,
+    "ast_hash": "e17ce7a3402ea9db6455e6792e2987bf",
+    "semantic_hash": "e17ce7a3402ea9db6455e6792e2987bf"
+  },
+  "/media/sulis/Local Disk/Progamming/PROJECT_WEBSITE/mini_project_membuat_perhitungan_bangun_datar/src/img/banner.jpg": {
+    "mtime": 1636768655.3264618,
+    "ast_hash": "8b754b9da413c5c3502fd77520a12c2b",
+    "semantic_hash": "8b754b9da413c5c3502fd77520a12c2b"
+  },
+  "/media/sulis/Local Disk/Progamming/PROJECT_WEBSITE/mini_project_membuat_perhitungan_bangun_datar/src/img/Belah_Ketupat.png": {
+    "mtime": 1640756809.9106407,
+    "ast_hash": "41be67944d0b04106a07fa493db6fb1d",
+    "semantic_hash": "41be67944d0b04106a07fa493db6fb1d"
+  },
+  "/media/sulis/Local Disk/Progamming/PROJECT_WEBSITE/mini_project_membuat_perhitungan_bangun_datar/src/img/Bola.png": {
+    "mtime": 1642998750.4074163,
+    "ast_hash": "7c13dde07e6f902187945f8fe9553778",
+    "semantic_hash": "7c13dde07e6f902187945f8fe9553778"
+  },
+  "/media/sulis/Local Disk/Progamming/PROJECT_WEBSITE/mini_project_membuat_perhitungan_bangun_datar/src/img/bola.svg": {
+    "mtime": 1779980489.365056,
+    "ast_hash": "f983834d8067af66a416cc6929193d69",
+    "semantic_hash": "f983834d8067af66a416cc6929193d69"
+  },
+  "/media/sulis/Local Disk/Progamming/PROJECT_WEBSITE/mini_project_membuat_perhitungan_bangun_datar/src/img/Jajar_Genjang.png": {
+    "mtime": 1636768655.312463,
+    "ast_hash": "63d282ef1d0a558c2dcdf28c4d691587",
+    "semantic_hash": "63d282ef1d0a558c2dcdf28c4d691587"
+  },
+  "/media/sulis/Local Disk/Progamming/PROJECT_WEBSITE/mini_project_membuat_perhitungan_bangun_datar/src/img/Kerucut.png": {
+    "mtime": 1641540022.8680878,
+    "ast_hash": "22a3b6618875cfe47dc51473df16b442",
+    "semantic_hash": "22a3b6618875cfe47dc51473df16b442"
+  },
+  "/media/sulis/Local Disk/Progamming/PROJECT_WEBSITE/mini_project_membuat_perhitungan_bangun_datar/src/img/kerucut.svg": {
+    "mtime": 1779979824.6505632,
+    "ast_hash": "ea9c13c8ee265ea421e089823efab1ae",
+    "semantic_hash": "ea9c13c8ee265ea421e089823efab1ae"
+  },
+  "/media/sulis/Local Disk/Progamming/PROJECT_WEBSITE/mini_project_membuat_perhitungan_bangun_datar/src/img/Kubus.png": {
+    "mtime": 1640840199.922521,
+    "ast_hash": "4adbae7881ab66be04195b89394364b7",
+    "semantic_hash": "4adbae7881ab66be04195b89394364b7"
+  },
+  "/media/sulis/Local Disk/Progamming/PROJECT_WEBSITE/mini_project_membuat_perhitungan_bangun_datar/src/img/kubus.svg": {
+    "mtime": 1779976975.2621508,
+    "ast_hash": "1316c81b696230a9c1ebe6b715b96af5",
+    "semantic_hash": "1316c81b696230a9c1ebe6b715b96af5"
+  },
+  "/media/sulis/Local Disk/Progamming/PROJECT_WEBSITE/mini_project_membuat_perhitungan_bangun_datar/src/img/Layang-Layang.png": {
+    "mtime": 1640767504.4718072,
+    "ast_hash": "9335e5f2f49e710dc0e70058f9622abc",
+    "semantic_hash": "9335e5f2f49e710dc0e70058f9622abc"
+  },
+  "/media/sulis/Local Disk/Progamming/PROJECT_WEBSITE/mini_project_membuat_perhitungan_bangun_datar/src/img/limas.svg": {
+    "mtime": 1780114867.8038,
+    "ast_hash": "f57973fa1e36a1fc3e7a3bd6a779b648",
+    "semantic_hash": "f57973fa1e36a1fc3e7a3bd6a779b648"
+  },
+  "/media/sulis/Local Disk/Progamming/PROJECT_WEBSITE/mini_project_membuat_perhitungan_bangun_datar/src/img/Lingkaran.png": {
+    "mtime": 1636768655.312463,
+    "ast_hash": "57ced3d835e304fc3b4610c29fdf4b4b",
+    "semantic_hash": "57ced3d835e304fc3b4610c29fdf4b4b"
+  },
+  "/media/sulis/Local Disk/Progamming/PROJECT_WEBSITE/mini_project_membuat_perhitungan_bangun_datar/src/img/Lingkaran@2x.png": {
+    "mtime": 1636768655.3134632,
+    "ast_hash": "e787cb3e7ab072156314a3b6d47172a3",
+    "semantic_hash": "e787cb3e7ab072156314a3b6d47172a3"
+  },
+  "/media/sulis/Local Disk/Progamming/PROJECT_WEBSITE/mini_project_membuat_perhitungan_bangun_datar/src/img/Persegi.png": {
+    "mtime": 1636768655.314467,
+    "ast_hash": "20aec76f15fdb9889305da6d1999d5b9",
+    "semantic_hash": "20aec76f15fdb9889305da6d1999d5b9"
+  },
+  "/media/sulis/Local Disk/Progamming/PROJECT_WEBSITE/mini_project_membuat_perhitungan_bangun_datar/src/img/Persegi_Panjang.png": {
+    "mtime": 1636768655.314467,
+    "ast_hash": "b5d33b00d2dece1f780f9b20fd55d844",
+    "semantic_hash": "b5d33b00d2dece1f780f9b20fd55d844"
+  },
+  "/media/sulis/Local Disk/Progamming/PROJECT_WEBSITE/mini_project_membuat_perhitungan_bangun_datar/src/img/Segitiga.png": {
+    "mtime": 1636768655.3154628,
+    "ast_hash": "2f477661b44af82a9ea72b68878a210f",
+    "semantic_hash": "2f477661b44af82a9ea72b68878a210f"
+  },
+  "/media/sulis/Local Disk/Progamming/PROJECT_WEBSITE/mini_project_membuat_perhitungan_bangun_datar/src/img/Tabung.png": {
+    "mtime": 1641541580.9124036,
+    "ast_hash": "39db54fcefbb08dd6103af3643398085",
+    "semantic_hash": "39db54fcefbb08dd6103af3643398085"
+  },
+  "/media/sulis/Local Disk/Progamming/PROJECT_WEBSITE/mini_project_membuat_perhitungan_bangun_datar/src/img/tabung.svg": {
+    "mtime": 1779979599.1179924,
+    "ast_hash": "19352f922d8403ee726dbb8675c4f486",
+    "semantic_hash": "19352f922d8403ee726dbb8675c4f486"
+  },
+  "/media/sulis/Local Disk/Progamming/PROJECT_WEBSITE/mini_project_membuat_perhitungan_bangun_datar/src/img/Trapesium.png": {
+    "mtime": 1636768655.3204935,
+    "ast_hash": "d5f8a4f2bed6f4c2992c4d15996b6ee8",
+    "semantic_hash": "d5f8a4f2bed6f4c2992c4d15996b6ee8"
+  },
+  "/media/sulis/Local Disk/Progamming/PROJECT_WEBSITE/mini_project_membuat_perhitungan_bangun_datar/src/img/prisma.svg": {
+    "mtime": 1780120784.1903803,
+    "ast_hash": "7ec33056bdea79b036557517163556c4",
+    "semantic_hash": ""
+  },
+  "/media/sulis/Local Disk/Progamming/PROJECT_WEBSITE/mini_project_membuat_perhitungan_bangun_datar/src/img/prisma-segiempat.svg": {
+    "mtime": 1780121573.5685546,
+    "ast_hash": "0f0dae2ac8683399c797512488282f22",
+    "semantic_hash": ""
+  },
+  "/media/sulis/Local Disk/Progamming/PROJECT_WEBSITE/mini_project_membuat_perhitungan_bangun_datar/src/img/prisma-segienam.svg": {
+    "mtime": 1780121606.3741376,
+    "ast_hash": "6a82b7e6fa0ba06f63ae6fb740bf484b",
+    "semantic_hash": ""
+  },
+  "/media/sulis/Local Disk/Progamming/PROJECT_WEBSITE/mini_project_membuat_perhitungan_bangun_datar/src/img/prisma-segilima.svg": {
+    "mtime": 1780121587.1281302,
+    "ast_hash": "0822c68a0d199543b9501c64f2487c5d",
+    "semantic_hash": ""
+  }
+}

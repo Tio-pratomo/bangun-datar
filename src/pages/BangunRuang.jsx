@@ -6,6 +6,11 @@ import balokImg from "../img/balok.svg";
 import tabungImg from "../img/tabung.svg";
 import kerucutImg from "../img/kerucut.svg";
 import bolaImg from "../img/bola.svg";
+import limasImg from "../img/limas.svg";
+import prismaImg from "../img/prisma.svg";
+import prismaSegiempatImg from "../img/prisma-segiempat.svg";
+import prismaSegilimaImg from "../img/prisma-segilima.svg";
+import prismaSegienamImg from "../img/prisma-segienam.svg";
 
 const formatNumber = (n) => Number(n.toFixed(6));
 
@@ -351,6 +356,166 @@ function BolaCalculator() {
   );
 }
 
+function LimasCalculator({ label }) {
+  const [luasAlas, setLuasAlas] = useState("");
+  const [kelilingAlas, setKelilingAlas] = useState("");
+  const [tinggi, setTinggi] = useState("");
+  const [tinggiSisiTegak, setTinggiSisiTegak] = useState("");
+  const [res, setRes] = useState([]);
+
+  const calcVolume = () => {
+    const la = parseFloat(luasAlas);
+    const t = parseFloat(tinggi);
+    if (isNaN(la) || isNaN(t) || la <= 0 || t <= 0)
+      return setRes(["Input tidak valid"]);
+    setRes([
+      "Rumus: V = 1/3 x Luas Alas x Tinggi",
+      `Input: V = 1/3 x ${formatNumber(la)} x ${formatNumber(t)}`,
+      `Volume = ${formatNumber((1 / 3) * la * t)}`,
+    ]);
+    setLuasAlas("");
+    setKelilingAlas("");
+    setTinggi("");
+    setTinggiSisiTegak("");
+  };
+
+  const calcLuasPermukaan = () => {
+    const la = parseFloat(luasAlas);
+    const ka = parseFloat(kelilingAlas);
+    const tst = parseFloat(tinggiSisiTegak);
+    if (isNaN(la) || isNaN(ka) || isNaN(tst) || la <= 0 || ka <= 0 || tst <= 0)
+      return setRes(["Input tidak valid"]);
+    setRes([
+      "Rumus: L = Luas Alas + 1/2 x Keliling Alas x Tinggi Sisi Tegak",
+      `Input: L = ${formatNumber(la)} + 1/2 x ${formatNumber(ka)} x ${formatNumber(tst)}`,
+      `Luas Permukaan = ${formatNumber(la + 0.5 * ka * tst)}`,
+    ]);
+    setLuasAlas("");
+    setKelilingAlas("");
+    setTinggi("");
+    setTinggiSisiTegak("");
+  };
+
+  return (
+    <ShapeLayout label={label} img={limasImg} res={res}>
+      <ShapeInput
+        value={luasAlas}
+        onChange={setLuasAlas}
+        placeholder="Masukkan luas alas"
+      />
+      <ShapeInput
+        value={kelilingAlas}
+        onChange={setKelilingAlas}
+        placeholder="Masukkan keliling alas"
+      />
+      <ShapeInput
+        value={tinggi}
+        onChange={setTinggi}
+        placeholder="Masukkan tinggi limas"
+      />
+      <ShapeInput
+        value={tinggiSisiTegak}
+        onChange={setTinggiSisiTegak}
+        placeholder="Masukkan tinggi sisi tegak"
+      />
+      <div className="flex gap-2 flex-wrap">
+        <button
+          onClick={calcVolume}
+          className="px-4 py-2 rounded bg-blue-500 text-white hover:bg-blue-600"
+        >
+          Hitung Volume
+        </button>
+        <button
+          onClick={calcLuasPermukaan}
+          className="px-4 py-2 rounded bg-green-500 text-white hover:bg-green-600"
+        >
+          Hitung Luas Permukaan
+        </button>
+      </div>
+    </ShapeLayout>
+  );
+}
+
+function PrismaCalculator({ label }) {
+  const [luasAlas, setLuasAlas] = useState("");
+  const [kelilingAlas, setKelilingAlas] = useState("");
+  const [tinggi, setTinggi] = useState("");
+  const [res, setRes] = useState([]);
+
+  // Pilih gambar berdasarkan label prisma
+  const getPrismaImage = () => {
+    if (label.includes("Segiempat")) return prismaSegiempatImg;
+    if (label.includes("Segilima")) return prismaSegilimaImg;
+    if (label.includes("Segienam")) return prismaSegienamImg;
+    return prismaImg; // default
+  };
+
+  const calcVolume = () => {
+    const la = parseFloat(luasAlas);
+    const t = parseFloat(tinggi);
+    if (isNaN(la) || isNaN(t) || la <= 0 || t <= 0)
+      return setRes(["Input tidak valid"]);
+    setRes([
+      "Rumus: V = Luas Alas x Tinggi",
+      `Input: V = ${formatNumber(la)} x ${formatNumber(t)}`,
+      `Volume = ${formatNumber(la * t)}`,
+    ]);
+    setLuasAlas("");
+    setKelilingAlas("");
+    setTinggi("");
+  };
+
+  const calcLuasPermukaan = () => {
+    const la = parseFloat(luasAlas);
+    const ka = parseFloat(kelilingAlas);
+    const t = parseFloat(tinggi);
+    if (isNaN(la) || isNaN(ka) || isNaN(t) || la <= 0 || ka <= 0 || t <= 0)
+      return setRes(["Input tidak valid"]);
+    setRes([
+      "Rumus: L = 2 x Luas Alas + Keliling Alas x Tinggi",
+      `Input: L = 2 x ${formatNumber(la)} + ${formatNumber(ka)} x ${formatNumber(t)}`,
+      `Luas Permukaan = ${formatNumber(2 * la + ka * t)}`,
+    ]);
+    setLuasAlas("");
+    setKelilingAlas("");
+    setTinggi("");
+  };
+
+  return (
+    <ShapeLayout label={label} img={getPrismaImage()} res={res}>
+      <ShapeInput
+        value={luasAlas}
+        onChange={setLuasAlas}
+        placeholder="Masukkan luas alas"
+      />
+      <ShapeInput
+        value={kelilingAlas}
+        onChange={setKelilingAlas}
+        placeholder="Masukkan keliling alas"
+      />
+      <ShapeInput
+        value={tinggi}
+        onChange={setTinggi}
+        placeholder="Masukkan tinggi prisma"
+      />
+      <div className="flex gap-2 flex-wrap">
+        <button
+          onClick={calcVolume}
+          className="px-4 py-2 rounded bg-blue-500 text-white hover:bg-blue-600"
+        >
+          Hitung Volume
+        </button>
+        <button
+          onClick={calcLuasPermukaan}
+          className="px-4 py-2 rounded bg-green-500 text-white hover:bg-green-600"
+        >
+          Hitung Luas Permukaan
+        </button>
+      </div>
+    </ShapeLayout>
+  );
+}
+
 export default function BangunRuang() {
   const [selected, setSelected] = useState(null);
   const activeShape = shapes.find((s) => s.id === selected);
@@ -362,14 +527,10 @@ export default function BangunRuang() {
     if (selected === "tabung") return <TabungCalculator />;
     if (selected === "kerucut") return <KerucutCalculator />;
     if (selected === "bola") return <BolaCalculator />;
-
-    return (
-      <div className="bg-white dark:bg-gray-700 p-4 rounded shadow">
-        <p className="text-lg text-gray-900 dark:text-gray-100">
-          Kalkulator {activeShape?.label} (akan datang)
-        </p>
-      </div>
-    );
+    if (selected?.startsWith("limas-"))
+      return <LimasCalculator label={activeShape?.label} />;
+    if (selected?.startsWith("prisma-"))
+      return <PrismaCalculator label={activeShape?.label} />;
   };
 
   return (
