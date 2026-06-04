@@ -1,9 +1,0 @@
-<svg width="240" height="240" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="240" height="240" rx="16" fill="#F8FAFC"/>
-  <path d="M58 92L122 62L182 86L118 116L58 92Z" fill="#C7D2FE" stroke="#4338CA" stroke-width="3"/>
-  <path d="M58 92V150L118 176V116L58 92Z" fill="#A5B4FC" stroke="#4338CA" stroke-width="3"/>
-  <path d="M182 86V144L118 176V116L182 86Z" fill="#818CF8" stroke="#4338CA" stroke-width="3"/>
-  <path d="M122 62V118" stroke="#4338CA" stroke-width="3"/>
-  <path d="M58 150L118 176L182 144" stroke="#4338CA" stroke-width="3"/>
-  <text x="120" y="208" text-anchor="middle" font-family="monospace" font-size="16" fill="#312E81">Balok</text>
-</svg>

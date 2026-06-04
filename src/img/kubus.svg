@@ -1,9 +1,0 @@
-<svg width="240" height="240" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="240" height="240" rx="16" fill="#F8FAFC"/>
-  <path d="M74 86L120 60L166 86L120 112L74 86Z" fill="#BFDBFE" stroke="#2563EB" stroke-width="3"/>
-  <path d="M74 86V146L120 172V112L74 86Z" fill="#93C5FD" stroke="#2563EB" stroke-width="3"/>
-  <path d="M166 86V146L120 172V112L166 86Z" fill="#60A5FA" stroke="#2563EB" stroke-width="3"/>
-  <path d="M120 60V112" stroke="#2563EB" stroke-width="3"/>
-  <path d="M74 146L120 172L166 146" stroke="#2563EB" stroke-width="3"/>
-  <text x="120" y="206" text-anchor="middle" font-family="monospace" font-size="16" fill="#1E3A8A">Kubus</text>
-</svg>

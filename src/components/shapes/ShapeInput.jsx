@@ -14,7 +14,7 @@ export default function ShapeInput({ value, onChange, placeholder }) {
       value={value}
       onChange={handleInput}
       placeholder={placeholder}
-      className="w-full p-2 border rounded dark:bg-gray-600 dark:border-gray-500"
+      className="w-full p-2 border rounded bg-white text-gray-900 placeholder:text-gray-500 border-gray-300 dark:bg-gray-600 dark:text-gray-100 dark:placeholder:text-gray-300 dark:border-gray-500"
     />
   );
 }

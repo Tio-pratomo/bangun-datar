@@ -7,54 +7,62 @@ import Trapesium from "../components/shapes/Trapesium";
 import JajarGenjang from "../components/shapes/JajarGenjang";
 import BelahKetupat from "../components/shapes/BelahKetupat";
 import LayangLayang from "../components/shapes/LayangLayang";
+import persegiImg from "../img/Persegi.webp";
+import persegiPanjangImg from "../img/Persegi_Panjang.webp";
+import segitigaImg from "../img/Segitiga.webp";
+import lingkaranImg from "../img/Lingkaran@2x.webp";
+import trapesiumImg from "../img/Trapesium.webp";
+import jajarGenjangImg from "../img/Jajar_Genjang.webp";
+import belahKetupatImg from "../img/Belah_Ketupat.webp";
+import layangLayangImg from "../img/Layang-Layang.webp";
 
 const shapes = [
   {
     id: "persegi",
     label: "Persegi",
-    img: "/src/img/Persegi.png",
+    img: persegiImg,
     component: Persegi,
   },
   {
     id: "persegi-panjang",
     label: "Persegi Panjang",
-    img: "/src/img/Persegi_Panjang.png",
+    img: persegiPanjangImg,
     component: PersegiPanjang,
   },
   {
     id: "segitiga",
     label: "Segitiga",
-    img: "/src/img/Segitiga.png",
+    img: segitigaImg,
     component: Segitiga,
   },
   {
     id: "lingkaran",
     label: "Lingkaran",
-    img: "/src/img/Lingkaran.png",
+    img: lingkaranImg,
     component: Lingkaran,
   },
   {
     id: "trapesium",
     label: "Trapesium",
-    img: "/src/img/Trapesium.png",
+    img: trapesiumImg,
     component: Trapesium,
   },
   {
     id: "jajar-genjang",
     label: "Jajar Genjang",
-    img: "/src/img/Jajar_Genjang.png",
+    img: jajarGenjangImg,
     component: JajarGenjang,
   },
   {
     id: "belah-ketupat",
     label: "Belah Ketupat",
-    img: "/src/img/Belah_Ketupat.png",
+    img: belahKetupatImg,
     component: BelahKetupat,
   },
   {
     id: "layang-layang",
     label: "Layang-layang",
-    img: "/src/img/Layang-Layang.png",
+    img: layangLayangImg,
     component: LayangLayang,
   },
 ];

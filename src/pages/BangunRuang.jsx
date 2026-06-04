@@ -1,16 +1,17 @@
 import { useState } from "react";
 import ShapeLayout from "../components/shapes/ShapeLayout";
 import ShapeInput from "../components/shapes/ShapeInput";
-import kubusImg from "../img/kubus.svg";
-import balokImg from "../img/balok.svg";
-import tabungImg from "../img/tabung.svg";
-import kerucutImg from "../img/kerucut.svg";
-import bolaImg from "../img/bola.svg";
-import limasImg from "../img/limas.svg";
-import prismaImg from "../img/prisma.svg";
-import prismaSegiempatImg from "../img/prisma-segiempat.svg";
-import prismaSegilimaImg from "../img/prisma-segilima.svg";
-import prismaSegienamImg from "../img/prisma-segienam.svg";
+import kubusImg from "../img/Kubus.webp";
+import introBangunRuangImg from "../img/limas-segilima.webp";
+import balokImg from "../img/Balok.webp";
+import tabungImg from "../img/Tabung.webp";
+import kerucutImg from "../img/Kerucut.webp";
+import bolaImg from "../img/Bola.webp";
+import limasImg from "../img/limas-segilima.webp";
+import prismaImg from "../img/limas-segilima.webp";
+import prismaSegiempatImg from "../img/Balok.webp";
+import prismaSegilimaImg from "../img/limas-segilima.webp";
+import prismaSegienamImg from "../img/limas-segilima.webp";
 
 const formatNumber = (n) => Number(n.toFixed(6));
 
@@ -521,7 +522,17 @@ export default function BangunRuang() {
   const activeShape = shapes.find((s) => s.id === selected);
 
   const renderCalculator = () => {
-    if (!selected) return null;
+    if (!selected) {
+      return (
+        <ShapeLayout
+          label="Bangun Ruang"
+          img={introBangunRuangImg}
+          res={[]}
+        >
+          <p>Pilih salah satu bangun ruang di atas untuk memulai perhitungan.</p>
+        </ShapeLayout>
+      );
+    }
     if (selected === "kubus") return <KubusCalculator />;
     if (selected === "balok") return <BalokCalculator />;
     if (selected === "tabung") return <TabungCalculator />;
