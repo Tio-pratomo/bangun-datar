@@ -25,7 +25,6 @@ Math Edu App is a React/Vite educational calculator for Indonesian elementary ma
 - `src/context/` — React context providers; currently theme only.
 - `src/img/` — shape images used by calculators.
 - `docs/` — development notes; `docs/development_log.md` documents current UI/UX and manual QA expectations.
-- `graphify-out/` — generated analysis output. Treat as generated artifact; do not hand-edit unless task explicitly targets it.
 
 ## Development Commands
 
@@ -33,16 +32,16 @@ Use pnpm because repo has `pnpm-lock.yaml`.
 
 ```bash
 pnpm install
-pnpm run dev
-pnpm run build
-pnpm run preview
+pnpm dev
+pnpm build
+pnpm preview
 ```
 
 Package scripts from `package.json`:
 
-- `pnpm run dev` — Vite dev server.
-- `pnpm run build` — production build through `vite build`.
-- `pnpm run preview` — serve built output through `vite preview`.
+- `pnpm dev` — Vite dev server.
+- `pnpm build` — production build through `vite build`.
+- `pnpm preview` — serve built output through `vite preview`.
 
 No `test`, `lint`, or `format` scripts are defined.
 
@@ -96,7 +95,7 @@ No automated tests or test config exist. No `package.json` test script exists.
 For changes, run at least targeted manual QA plus build when behavior or imports changed:
 
 ```bash
-pnpm run build
+pnpm build
 ```
 
 Manual QA expectations from `docs/development_log.md`:

@@ -21,6 +21,8 @@
 - **Testing Manual (Step 10)**: selesai.
   - Uji angka bulat, desimal, input kosong, non-angka.
   - Verifikasi rumus, reset input, dark mode, responsif.
+- **Automated Testing (Step 15)**: selesai.
+  - Vitest + React Testing Library (Navigation, Dark Mode, 2D/3D Calculators, Unit Conversion, ShapeInput numeric guard).
 - **Finalisasi (Step 11)**: selesai.
   - Label dan rumus dirapikan.
   - Status proyek diperbarui.
