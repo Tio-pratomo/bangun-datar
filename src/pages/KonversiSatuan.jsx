@@ -66,7 +66,9 @@ export default function KonversiSatuan() {
 
   return (
     <div className="p-6">
-      <h2 className="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-100">Konversi Satuan</h2>
+      <h2 className="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-100">
+        Konversi Satuan
+      </h2>
       <div className="flex flex-wrap gap-4 mb-6">
         {types.map((t) => (
           <button
