@@ -1,6 +1,6 @@
 import { useState } from "react";
-import ShapeLayout from "./ShapeLayout";
-import ShapeInput from "./ShapeInput";
+import ShapeLayout from "../ShapeLayout";
+import ShapeInput from "../ShapeInput";
 
 export default function JajarGenjang({ label, img }) {
   const [v1, setV1] = useState("");

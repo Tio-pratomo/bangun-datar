@@ -1,6 +1,6 @@
 import { useState } from "react";
-import ShapeLayout from "./ShapeLayout";
-import ShapeInput from "./ShapeInput";
+import ShapeLayout from "../ShapeLayout";
+import ShapeInput from "../ShapeInput";
 
 export default function Persegi({ label, img }) {
   const [val, setVal] = useState("");

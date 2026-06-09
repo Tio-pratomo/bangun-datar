@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { formatNumber } from "./utils";
-import ShapeLayout from "./ShapeLayout";
-import ShapeInput from "./ShapeInput";
+import { formatNumber } from "../utils";
+import ShapeLayout from "../ShapeLayout";
+import ShapeInput from "../ShapeInput";
 
 export default function PrismaSegilima({ label, img }) {
   const [luasAlas, setLuasAlas] = useState("");

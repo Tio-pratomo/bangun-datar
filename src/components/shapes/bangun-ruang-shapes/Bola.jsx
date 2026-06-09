@@ -1,43 +1,38 @@
 import { useState } from "react";
-import { formatNumber } from "./utils";
-import ShapeLayout from "./ShapeLayout";
-import ShapeInput from "./ShapeInput";
+import { formatNumber } from "../utils";
+import ShapeLayout from "../ShapeLayout";
+import ShapeInput from "../ShapeInput";
 
-export default function Tabung({ label, img }) {
+export default function Bola({ label, img }) {
   const [jariJari, setJariJari] = useState("");
-  const [tinggi, setTinggi] = useState("");
   const [res, setRes] = useState([]);
 
   const calcVolume = () => {
     const r = parseFloat(jariJari);
-    const t = parseFloat(tinggi);
 
-    if (isNaN(r) || isNaN(t)) return setRes(["Input tidak valid"]);
+    if (isNaN(r)) return setRes(["Input tidak valid"]);
 
     setRes([
-      "Rumus: V = πr²t",
-      `Input: V = π x ${formatNumber(r)}² x ${formatNumber(t)}`,
-      `Volume = ${formatNumber(Math.PI * r ** 2 * t)}`,
+      "Rumus: V = 4/3 πr³",
+      `Input: V = 4/3 x π x ${formatNumber(r)}³`,
+      `Volume = ${formatNumber((4 / 3) * Math.PI * r ** 3)}`,
     ]);
 
     setJariJari("");
-    setTinggi("");
   };
 
   const calcLuasPermukaan = () => {
     const r = parseFloat(jariJari);
-    const t = parseFloat(tinggi);
 
-    if (isNaN(r) || isNaN(t)) return setRes(["Input tidak valid"]);
+    if (isNaN(r)) return setRes(["Input tidak valid"]);
 
     setRes([
-      "Rumus: L = 2πr(r + t)",
-      `Input: L = 2 x π x ${formatNumber(r)} x (${formatNumber(r)} + ${formatNumber(t)})`,
-      `Luas Permukaan = ${formatNumber(2 * Math.PI * r * (r + t))}`,
+      "Rumus: L = 4πr²",
+      `Input: L = 4 x π x ${formatNumber(r)}²`,
+      `Luas Permukaan = ${formatNumber(4 * Math.PI * r ** 2)}`,
     ]);
 
     setJariJari("");
-    setTinggi("");
   };
 
   return (
@@ -46,11 +41,6 @@ export default function Tabung({ label, img }) {
         value={jariJari}
         onChange={setJariJari}
         placeholder="Masukkan jari-jari"
-      />
-      <ShapeInput
-        value={tinggi}
-        onChange={setTinggi}
-        placeholder="Masukkan tinggi"
       />
       <div className="flex gap-2 flex-wrap">
         <button

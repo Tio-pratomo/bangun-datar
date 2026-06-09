@@ -95,3 +95,26 @@ describe('App', () => {
     expect(screen.getByText(/Input tidak valid/i)).toBeInTheDocument();
   });
 });
+
+  it('hides calculators until shape is selected', async () => {
+    const { user } = setup(<App />);
+    expect(screen.queryByText(/Kalkulator/i)).not.toBeInTheDocument();
+
+    await user.click(screen.getByRole('button', { name: 'Persegi' }));
+    expect(screen.getByRole('heading', { name: 'Kalkulator Persegi' })).toBeInTheDocument();
+
+    await clickNav(user, 'Bangun Ruang');
+    expect(screen.queryByText(/Kalkulator/i)).not.toBeInTheDocument();
+    expect(screen.queryByText('Pilih salah satu bangun ruang di atas untuk memulai perhitungan.')).not.toBeInTheDocument();
+
+    await user.click(screen.getByRole('button', { name: 'Kubus' }));
+    expect(screen.getByRole('heading', { name: 'Kalkulator Kubus' })).toBeInTheDocument();
+  });
+
+  it('uses requested Bangun Ruang label grid columns', async () => {
+    const { user } = setup(<App />);
+    await clickNav(user, 'Bangun Ruang');
+    const kubusButton = screen.getByRole('button', { name: 'Kubus' });
+    expect(kubusButton.parentElement).toHaveClass('grid-cols-3');
+    expect(kubusButton.parentElement).toHaveClass('min-[601px]:grid-cols-1');
+  });

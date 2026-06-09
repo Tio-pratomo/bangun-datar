@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { formatNumber } from "./utils";
-import ShapeLayout from "./ShapeLayout";
-import ShapeInput from "./ShapeInput";
+import { formatNumber } from "../utils";
+import ShapeLayout from "../ShapeLayout";
+import ShapeInput from "../ShapeInput";
 
-export default function PrismaSegitiga({ label, img }) {
+export default function PrismaSegiempat({ label, img }) {
   const [luasAlas, setLuasAlas] = useState("");
   const [kelilingAlas, setKelilingAlas] = useState("");
   const [tinggi, setTinggi] = useState("");

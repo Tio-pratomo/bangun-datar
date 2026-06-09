@@ -1,12 +1,13 @@
 import { useState } from "react";
-import { formatNumber } from "./utils";
-import ShapeLayout from "./ShapeLayout";
-import ShapeInput from "./ShapeInput";
+import { formatNumber } from "../utils";
+import ShapeLayout from "../ShapeLayout";
+import ShapeInput from "../ShapeInput";
 
-export default function PrismaSegienam({ label, img }) {
+export default function LimasSegiempat({ label, img }) {
   const [luasAlas, setLuasAlas] = useState("");
   const [kelilingAlas, setKelilingAlas] = useState("");
   const [tinggi, setTinggi] = useState("");
+  const [tinggiSisiTegak, setTinggiSisiTegak] = useState("");
   const [res, setRes] = useState([]);
 
   const calcVolume = () => {
@@ -15,29 +16,31 @@ export default function PrismaSegienam({ label, img }) {
     if (isNaN(la) || isNaN(t) || la <= 0 || t <= 0)
       return setRes(["Input tidak valid"]);
     setRes([
-      "Rumus: V = Luas Alas x Tinggi",
-      `Input: V = ${formatNumber(la)} x ${formatNumber(t)}`,
-      `Volume = ${formatNumber(la * t)}`,
+      "Rumus: V = 1/3 x Luas Alas x Tinggi",
+      `Input: V = 1/3 x ${formatNumber(la)} x ${formatNumber(t)}`,
+      `Volume = ${formatNumber((1 / 3) * la * t)}`,
     ]);
     setLuasAlas("");
     setKelilingAlas("");
     setTinggi("");
+    setTinggiSisiTegak("");
   };
 
   const calcLuasPermukaan = () => {
     const la = parseFloat(luasAlas);
     const ka = parseFloat(kelilingAlas);
-    const t = parseFloat(tinggi);
-    if (isNaN(la) || isNaN(ka) || isNaN(t) || la <= 0 || ka <= 0 || t <= 0)
+    const tst = parseFloat(tinggiSisiTegak);
+    if (isNaN(la) || isNaN(ka) || isNaN(tst) || la <= 0 || ka <= 0 || tst <= 0)
       return setRes(["Input tidak valid"]);
     setRes([
-      "Rumus: L = 2 x Luas Alas + Keliling Alas x Tinggi",
-      `Input: L = 2 x ${formatNumber(la)} + ${formatNumber(ka)} x ${formatNumber(t)}`,
-      `Luas Permukaan = ${formatNumber(2 * la + ka * t)}`,
+      "Rumus: L = Luas Alas + 1/2 x Keliling Alas x Tinggi Sisi Tegak",
+      `Input: L = ${formatNumber(la)} + 1/2 x ${formatNumber(ka)} x ${formatNumber(tst)}`,
+      `Luas Permukaan = ${formatNumber(la + 0.5 * ka * tst)}`,
     ]);
     setLuasAlas("");
     setKelilingAlas("");
     setTinggi("");
+    setTinggiSisiTegak("");
   };
 
   return (
@@ -55,7 +58,12 @@ export default function PrismaSegienam({ label, img }) {
       <ShapeInput
         value={tinggi}
         onChange={setTinggi}
-        placeholder="Masukkan tinggi prisma"
+        placeholder="Masukkan tinggi limas"
+      />
+      <ShapeInput
+        value={tinggiSisiTegak}
+        onChange={setTinggiSisiTegak}
+        placeholder="Masukkan tinggi sisi tegak"
       />
       <div className="flex gap-2 flex-wrap">
         <button

@@ -1,20 +1,18 @@
 import { useState } from "react";
-import Kubus from "../components/shapes/Kubus";
-import Balok from "../components/shapes/Balok";
-import Tabung from "../components/shapes/Tabung";
-import Kerucut from "../components/shapes/Kerucut";
-import Bola from "../components/shapes/Bola";
-import LimasSegitiga from "../components/shapes/LimasSegitiga";
-import LimasSegiempat from "../components/shapes/LimasSegiempat";
-import LimasSegilima from "../components/shapes/LimasSegilima";
-import LimasSegienam from "../components/shapes/LimasSegienam";
-import PrismaSegitiga from "../components/shapes/PrismaSegitiga";
-import PrismaSegiempat from "../components/shapes/PrismaSegiempat";
-import PrismaSegilima from "../components/shapes/PrismaSegilima";
-import PrismaSegienam from "../components/shapes/PrismaSegienam";
-import ShapeLayout from "../components/shapes/ShapeLayout";
+import Kubus from "../components/shapes/bangun-ruang-shapes/Kubus";
+import Balok from "../components/shapes/bangun-ruang-shapes/Balok";
+import Tabung from "../components/shapes/bangun-ruang-shapes/Tabung";
+import Kerucut from "../components/shapes/bangun-ruang-shapes/Kerucut";
+import Bola from "../components/shapes/bangun-ruang-shapes/Bola";
+import LimasSegitiga from "../components/shapes/bangun-ruang-shapes/LimasSegitiga";
+import LimasSegiempat from "../components/shapes/bangun-ruang-shapes/LimasSegiempat";
+import LimasSegilima from "../components/shapes/bangun-ruang-shapes/LimasSegilima";
+import LimasSegienam from "../components/shapes/bangun-ruang-shapes/LimasSegienam";
+import PrismaSegitiga from "../components/shapes/bangun-ruang-shapes/PrismaSegitiga";
+import PrismaSegiempat from "../components/shapes/bangun-ruang-shapes/PrismaSegiempat";
+import PrismaSegilima from "../components/shapes/bangun-ruang-shapes/PrismaSegilima";
+import PrismaSegienam from "../components/shapes/bangun-ruang-shapes/PrismaSegienam";
 import kubusImg from "../img/Kubus.webp";
-import introBangunRuangImg from "../img/limas-segilima.webp";
 import balokImg from "../img/Balok.webp";
 import tabungImg from "../img/Tabung.webp";
 import kerucutImg from "../img/Kerucut.webp";
@@ -93,7 +91,7 @@ export default function BangunRuang() {
       <h2 className="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-100">
         Bangun Ruang
       </h2>
-      <div className="grid grid-cols-3 gap-3 mb-6">
+      <div className="grid grid-cols-2 min-[601px]:grid-cols-4 gap-3 mb-6">
         {shapes.map((s) => (
           <button
             key={s.id}
@@ -109,17 +107,11 @@ export default function BangunRuang() {
         ))}
       </div>
 
-      {activeShape ? (
+      {activeShape && (
         <activeShape.component
           label={activeShape.label}
           img={activeShape.img}
         />
-      ) : (
-        <ShapeLayout label="Bangun Ruang" img={introBangunRuangImg} res={[]}>
-          <p>
-            Pilih salah satu bangun ruang di atas untuk memulai perhitungan.
-          </p>
-        </ShapeLayout>
       )}
     </div>
   );
