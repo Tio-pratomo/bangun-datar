@@ -44,6 +44,29 @@ jobs:
       - name: Build
         run: pnpm build
 
+      - name: Prepare Pages artifact
+        run: |
+          cp dist/index.html dist/404.html
+          touch dist/.nojekyll
+
+      - name: Verify Pages artifact assets
+        run: |
+          node --input-type=module <<'NODE'
+          import { readFileSync, existsSync } from 'node:fs';
+          import { join } from 'node:path';
+
+          const index = readFileSync('dist/index.html', 'utf8');
+          const assetPaths = [...index.matchAll(/(?:src|href)="\/mini_project_membuat_perhitungan_bangun_datar\/(assets\/[^\"]+)"/g)].map((match) => match[1]);
+          if (assetPaths.length === 0) {
+            throw new Error('No built asset references found in dist/index.html');
+          }
+
+          const missing = assetPaths.filter((assetPath) => !existsSync(join('dist', assetPath)));
+          if (missing.length > 0) {
+            throw new Error(`Missing built assets referenced by dist/index.html: ${missing.join(', ')}`);
+          }
+          NODE
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
