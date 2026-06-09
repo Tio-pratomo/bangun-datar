@@ -115,6 +115,6 @@ describe('App', () => {
     const { user } = setup(<App />);
     await clickNav(user, 'Bangun Ruang');
     const kubusButton = screen.getByRole('button', { name: 'Kubus' });
-    expect(kubusButton.parentElement).toHaveClass('grid-cols-3');
-    expect(kubusButton.parentElement).toHaveClass('min-[601px]:grid-cols-1');
+    expect(kubusButton.parentElement).toHaveClass('grid-cols-2');
+    expect(kubusButton.parentElement).toHaveClass('min-[601px]:grid-cols-4');
   });
