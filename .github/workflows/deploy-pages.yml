@@ -56,7 +56,7 @@ jobs:
           import { join } from 'node:path';
 
           const index = readFileSync('dist/index.html', 'utf8');
-          const assetPaths = [...index.matchAll(/(?:src|href)="\/mini_project_membuat_perhitungan_bangun_datar\/(assets\/[^\"]+)"/g)].map((match) => match[1]);
+          const assetPaths = [...index.matchAll(/(?:src|href)="\/bangun-datar\/(assets\/[^\"]+)"/g)].map((match) => match[1]);
           if (assetPaths.length === 0) {
             throw new Error('No built asset references found in dist/index.html');
           }

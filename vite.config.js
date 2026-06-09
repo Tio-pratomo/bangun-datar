@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  base: '/mini_project_membuat_perhitungan_bangun_datar/',
+  base: '/bangun-datar/',
   plugins: [
     react(),
     tailwindcss(),
