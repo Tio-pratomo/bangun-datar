@@ -1,76 +1,93 @@
+/**
+ * Renders the Balok calculator card.
+ *
+ * Computed 3D results are formatted with formatNumber before display.
+ * The component keeps raw input text and result lines in local state, then
+ * renders them through ShapeLayout. Numeric fields are entered through
+ * ShapeInput so invalid characters are rejected before calculation.
+ *
+ * @param {Object} props
+ * @param {string} props.label - Shape label rendered by ShapeLayout heading and image alt text.
+ * @param {string} props.img - Shape image URL rendered by ShapeLayout.
+ * @returns {JSX.Element} Calculator UI composed from ShapeLayout, ShapeInput, and action buttons.
+ */
 import { useState } from "react";
 import { formatNumber } from "../utils";
 import ShapeLayout from "../ShapeLayout";
 import ShapeInput from "../ShapeInput";
 
 export default function Balok({ label, img }) {
-  const [panjang, setPanjang] = useState("");
-  const [lebar, setLebar] = useState("");
-  const [tinggi, setTinggi] = useState("");
-  const [res, setRes] = useState([]);
+  const [length, setLength] = useState("");
+  const [width, setWidth] = useState("");
+  const [height, setHeight] = useState("");
+  const [resultLines, setResultLines] = useState([]);
 
-  const calcVolume = () => {
-    const p = parseFloat(panjang);
-    const l = parseFloat(lebar);
-    const t = parseFloat(tinggi);
-
-    if (isNaN(p) || isNaN(l) || isNaN(t)) return setRes(["Input tidak valid"]);
-
-    setRes([
-      "Rumus: V = p x l x t",
-      `Input: V = ${formatNumber(p)} x ${formatNumber(l)} x ${formatNumber(t)}`,
-      `Volume = ${formatNumber(p * l * t)}`,
-    ]);
-
-    setPanjang("");
-    setLebar("");
-    setTinggi("");
+  /** Clears all input fields. */
+  const resetInputs = () => {
+    setLength("");
+    setWidth("");
+    setHeight("");
   };
 
-  const calcLuasPermukaan = () => {
-    const p = parseFloat(panjang);
-    const l = parseFloat(lebar);
-    const t = parseFloat(tinggi);
+  /** Parses required fields, validates them, then renders volume formula and result lines. */
+  const calculateVolume = () => {
+    const lengthValue = parseFloat(length);
+    const widthValue = parseFloat(width);
+    const heightValue = parseFloat(height);
 
-    if (isNaN(p) || isNaN(l) || isNaN(t)) return setRes(["Input tidak valid"]);
-
-    setRes([
-      "Rumus: L = 2(pl + pt + lt)",
-      `Input: L = 2((${formatNumber(p)} x ${formatNumber(l)}) + (${formatNumber(p)} x ${formatNumber(t)}) + (${formatNumber(l)} x ${formatNumber(t)}))`,
-      `Luas Permukaan = ${formatNumber(2 * (p * l + p * t + l * t))}`,
+    if (isNaN(lengthValue) || isNaN(widthValue) || isNaN(heightValue))
+      return setResultLines(["Input tidak valid"]);
+    setResultLines([
+      "Rumus: V = p x l x t",
+      `Input: V = ${formatNumber(lengthValue)} x ${formatNumber(widthValue)} x ${formatNumber(heightValue)}`,
+      `Volume = ${formatNumber(lengthValue * widthValue * heightValue)}`,
     ]);
+    resetInputs();
+  };
 
-    setPanjang("");
-    setLebar("");
-    setTinggi("");
+  /** Parses required fields, validates them, then renders surface-area formula and result lines. */
+  const calculateSurfaceArea = () => {
+    const lengthValue = parseFloat(length);
+    const widthValue = parseFloat(width);
+    const heightValue = parseFloat(height);
+    if (isNaN(lengthValue) || isNaN(widthValue) || isNaN(heightValue))
+      return setResultLines(["Input tidak valid"]);
+    setResultLines([
+      "Rumus: L = 2(pl + pt + lt)",
+      `Input: L = 2((${formatNumber(lengthValue)} x ${formatNumber(widthValue)}) + (${formatNumber(lengthValue)} x ${formatNumber(heightValue)}) + (${formatNumber(widthValue)} x ${formatNumber(heightValue)}))`,
+      `Luas Permukaan = ${formatNumber(2 * (lengthValue * widthValue + lengthValue * heightValue + widthValue * heightValue))}`,
+    ]);
+    resetInputs();
   };
 
   return (
-    <ShapeLayout label={label} img={img} res={res}>
-      <ShapeInput
-        value={panjang}
-        onChange={setPanjang}
-        placeholder="Masukkan panjang"
-      />
-      <ShapeInput
-        value={lebar}
-        onChange={setLebar}
-        placeholder="Masukkan lebar"
-      />
-      <ShapeInput
-        value={tinggi}
-        onChange={setTinggi}
-        placeholder="Masukkan tinggi"
-      />
+    <ShapeLayout label={label} img={img} res={resultLines}>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <ShapeInput
+          value={length}
+          onChange={setLength}
+          placeholder="Masukkan panjang"
+        />
+        <ShapeInput
+          value={width}
+          onChange={setWidth}
+          placeholder="Masukkan lebar"
+        />
+        <ShapeInput
+          value={height}
+          onChange={setHeight}
+          placeholder="Masukkan tinggi"
+        />
+      </div>
       <div className="flex gap-2 flex-wrap">
         <button
-          onClick={calcVolume}
+          onClick={calculateVolume}
           className="px-4 py-2 rounded bg-blue-500 text-white hover:bg-blue-600"
         >
           Hitung Volume
         </button>
         <button
-          onClick={calcLuasPermukaan}
+          onClick={calculateSurfaceArea}
           className="px-4 py-2 rounded bg-green-500 text-white hover:bg-green-600"
         >
           Hitung Luas Permukaan

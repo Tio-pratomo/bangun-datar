@@ -1,39 +1,63 @@
+/**
+ * Renders the LayangLayang calculator card.
+ *
+ * The component keeps raw input text and result lines in local state, then
+ * renders them through ShapeLayout. Numeric fields are entered through
+ * ShapeInput so invalid characters are rejected before calculation.
+ *
+ * @param {Object} props
+ * @param {string} props.label - Shape label rendered by ShapeLayout heading and image alt text.
+ * @param {string} props.img - Shape image URL rendered by ShapeLayout.
+ * @returns {JSX.Element} Calculator UI composed from ShapeLayout, ShapeInput, and action buttons.
+ */
 import { useState } from "react";
 import ShapeLayout from "../ShapeLayout";
 import ShapeInput from "../ShapeInput";
 
 export default function LayangLayang({ label, img }) {
-  const [v1, setV1] = useState("");
-  const [v2, setV2] = useState("");
-  const [v3, setV3] = useState("");
-  const [v4, setV4] = useState("");
-  const [res, setRes] = useState([]);
+  const [diagonal1, setDiagonal1] = useState("");
+  const [diagonal2, setDiagonal2] = useState("");
+  const [sideA, setSideA] = useState("");
+  const [sideB, setSideB] = useState("");
+  const [resultLines, setResultLines] = useState([]);
 
-  const calcLuas = () => {
-    const d1 = parseFloat(v1);
-    const d2 = parseFloat(v2);
-    if (isNaN(d1) || isNaN(d2)) return setRes(["Input tidak valid"]);
-    setRes([`Rumus: 1/2 x d1 x d2`, `Input: 0.5 x ${d1} x ${d2}`, `Luas = ${0.5 * d1 * d2}`]);
-    setV1(""); setV2(""); setV3(""); setV4("");
+  /** Clears all calculator fields after a successful calculation. */
+  const resetInputs = () => {
+    setDiagonal1("");
+    setDiagonal2("");
+    setSideA("");
+    setSideB("");
   };
 
-  const calcKeliling = () => {
-    const a = parseFloat(v3);
-    const b = parseFloat(v4);
-    if (isNaN(a) || isNaN(b)) return setRes(["Input tidak valid"]);
-    setRes([`Rumus: 2 x (a + b)`, `Input: 2 x (${a} + ${b})`, `Keliling = ${2 * (a + b)}`]);
-    setV1(""); setV2(""); setV3(""); setV4("");
+  /** Parses required fields, validates them, then renders area formula and result lines. */
+  const calculateArea = () => {
+    const firstDiagonal = parseFloat(diagonal1);
+    const secondDiagonal = parseFloat(diagonal2);
+    if (isNaN(firstDiagonal) || isNaN(secondDiagonal)) return setResultLines(["Input tidak valid"]);
+    setResultLines([`Rumus: 1/2 x d1 x d2`, `Input: 0.5 x ${firstDiagonal} x ${secondDiagonal}`, `Luas = ${0.5 * firstDiagonal * secondDiagonal}`]);
+    resetInputs();
+  };
+
+  /** Parses required fields, validates them, then renders perimeter formula and result lines. */
+  const calculatePerimeter = () => {
+    const sideAValue = parseFloat(sideA);
+    const sideBValue = parseFloat(sideB);
+    if (isNaN(sideAValue) || isNaN(sideBValue)) return setResultLines(["Input tidak valid"]);
+    setResultLines([`Rumus: 2 x (a + b)`, `Input: 2 x (${sideAValue} + ${sideBValue})`, `Keliling = ${2 * (sideAValue + sideBValue)}`]);
+    resetInputs();
   };
 
   return (
-    <ShapeLayout label={label} img={img} res={res}>
-      <ShapeInput value={v1} onChange={setV1} placeholder="Diagonal 1" />
-      <ShapeInput value={v2} onChange={setV2} placeholder="Diagonal 2" />
-      <ShapeInput value={v3} onChange={setV3} placeholder="Sisi a" />
-      <ShapeInput value={v4} onChange={setV4} placeholder="Sisi b" />
+    <ShapeLayout label={label} img={img} res={resultLines}>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <ShapeInput value={diagonal1} onChange={setDiagonal1} placeholder="Diagonal 1" />
+      <ShapeInput value={diagonal2} onChange={setDiagonal2} placeholder="Diagonal 2" />
+      <ShapeInput value={sideA} onChange={setSideA} placeholder="Sisi a" />
+      <ShapeInput value={sideB} onChange={setSideB} placeholder="Sisi b" />
+      </div>
       <div className="flex gap-4">
-        <button onClick={calcLuas} className="bg-blue-600 text-white px-4 py-2 rounded">Hitung Luas</button>
-        <button onClick={calcKeliling} className="bg-green-600 text-white px-4 py-2 rounded">Hitung Keliling</button>
+        <button onClick={calculateArea} className="bg-blue-600 text-white px-4 py-2 rounded">Hitung Luas</button>
+        <button onClick={calculatePerimeter} className="bg-green-600 text-white px-4 py-2 rounded">Hitung Keliling</button>
       </div>
     </ShapeLayout>
   );
