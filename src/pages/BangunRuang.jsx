@@ -1,4 +1,5 @@
 import { useState } from "react";
+import CategoryModal from "../components/CategoryModal";
 import Kubus from "../components/shapes/bangun-ruang-shapes/Kubus";
 import Balok from "../components/shapes/bangun-ruang-shapes/Balok";
 import Tabung from "../components/shapes/bangun-ruang-shapes/Tabung";
@@ -26,12 +27,7 @@ import prismaSegiempatImg from "../img/Balok.webp";
 import prismaSegilimaImg from "../img/prisma_segilima.webp";
 import prismaSegienamImg from "../img/prisma_segienam.webp";
 
-const shapes = [
-  { id: "kubus", label: "Kubus", img: kubusImg, component: Kubus },
-  { id: "balok", label: "Balok", img: balokImg, component: Balok },
-  { id: "tabung", label: "Tabung", img: tabungImg, component: Tabung },
-  { id: "kerucut", label: "Kerucut", img: kerucutImg, component: Kerucut },
-  { id: "bola", label: "Bola", img: bolaImg, component: Bola },
+const limasOptions = [
   {
     id: "limas-segitiga",
     label: "Limas Segitiga",
@@ -56,6 +52,9 @@ const shapes = [
     img: limasSegienamImg,
     component: LimasSegienam,
   },
+];
+
+const prismaOptions = [
   {
     id: "prisma-segitiga",
     label: "Prisma Segitiga",
@@ -82,37 +81,89 @@ const shapes = [
   },
 ];
 
+const shapes = [
+  { id: "kubus", label: "Kubus", img: kubusImg, component: Kubus },
+  { id: "balok", label: "Balok", img: balokImg, component: Balok },
+  { id: "tabung", label: "Tabung", img: tabungImg, component: Tabung },
+  { id: "kerucut", label: "Kerucut", img: kerucutImg, component: Kerucut },
+  { id: "bola", label: "Bola", img: bolaImg, component: Bola },
+  {
+    id: "limas",
+    label: "Limas",
+    img: limasSegitigaImg,
+    isCategory: true,
+    options: limasOptions,
+  },
+  {
+    id: "prisma",
+    label: "Prisma",
+    img: prismaSegitigaImg,
+    isCategory: true,
+    options: prismaOptions,
+  },
+];
+
 export default function BangunRuang() {
   const [selected, setSelected] = useState(null);
-  const activeShape = shapes.find((s) => s.id === selected);
+  const [modalData, setModalData] = useState({
+    isOpen: false,
+    title: "",
+    options: [],
+  });
+
+  const allShapes = [...shapes, ...limasOptions, ...prismaOptions];
+  const activeShape = allShapes.find((s) => s.id === selected);
+
+  const handleShapeClick = (shape) => {
+    if (shape.isCategory) {
+      setModalData({
+        isOpen: true,
+        title: `Pilih Kategori ${shape.label}`,
+        options: shape.options,
+      });
+    } else {
+      setSelected(shape.id);
+    }
+  };
 
   return (
     <div className="p-6">
-      <h2 className="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-100">
-        Bangun Ruang
-      </h2>
-      <div className="grid grid-cols-2 min-[601px]:grid-cols-4 gap-3 mb-6">
-        {shapes.map((s) => (
+      {!activeShape && (
+        <h2 className="text-2xl font-bold mb-6 text-gray-900 dark:text-gray-100">
+          Kalkulator Bangun Ruang
+        </h2>
+      )}
+
+      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-3 mb-8">
+        {shapes.map((shape) => (
           <button
-            key={s.id}
-            onClick={() => setSelected(s.id)}
-            className={`w-full px-2 py-2 text-sm sm:text-base rounded border transition-colors ${
-              selected === s.id
-                ? "bg-blue-500 text-white border-blue-500"
-                : "bg-white dark:bg-gray-700 dark:text-gray-200 border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-600"
+            key={shape.id}
+            onClick={() => handleShapeClick(shape)}
+            className={`px-3 py-2 rounded border transition-all text-sm font-medium ${
+              selected?.startsWith(shape.id)
+                ? "bg-blue-600 text-white border-blue-600 shadow-md"
+                : "bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-200 border-gray-300 dark:border-gray-600 hover:border-blue-400"
             }`}
           >
-            {s.label}
+            {shape.label}
           </button>
         ))}
       </div>
 
-      {activeShape && (
+      {activeShape ? (
         <activeShape.component
           label={activeShape.label}
           img={activeShape.img}
         />
-      )}
+      ) : null}
+
+      <CategoryModal
+        isOpen={modalData.isOpen}
+        title={modalData.title}
+        options={modalData.options}
+        onClose={() => setModalData({ ...modalData, isOpen: false })}
+        onSelect={(opt) => setSelected(opt.id)}
+      />
     </div>
   );
 }
