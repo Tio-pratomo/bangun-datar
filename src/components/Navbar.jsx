@@ -9,6 +9,9 @@ export default function Navbar({ currentPage, setPage }) {
     { id: "konversi-satuan", label: "Konversi Satuan" },
   ];
 
+  const getNavBtnClass = (id) => {
+    return currentPage === id ? "active" : "";
+  };
 
   const drawerIcon = (
     <svg
@@ -52,14 +55,11 @@ export default function Navbar({ currentPage, setPage }) {
             <ul className="menu menu-horizontal px-1 gap-1">
               {pages.map((p) => (
                 <li key={p.id} className={currentPage === p.id ? "active" : ""}>
-                  <button
-                    onClick={() => setPage(p.id)}
-                  >
-                    {p.label}
-                  </button>
+                  <button onClick={() => setPage(p.id)}>{p.label}</button>
                 </li>
               ))}
             </ul>
+          </div>
 
           <div className="navbar-end">
             <button
