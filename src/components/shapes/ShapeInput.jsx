@@ -10,7 +10,7 @@ export default function ShapeInput({ value, onChange, placeholder }) {
 
   return (
     <input
-      type="text"
+      type="number"
       value={value}
       onChange={handleInput}
       placeholder={placeholder}
