@@ -1,9 +1,11 @@
 import { useState } from "react";
+import ShapeInput from "../components/shapes/ShapeInput";
 
 const types = [
   { id: "panjang", label: "Panjang" },
   { id: "volume", label: "Volume" },
   { id: "berat", label: "Berat" },
+  { id: "suhu", label: "Suhu" },
 ];
 
 const unitData = {
@@ -36,6 +38,12 @@ const unitData = {
     cg: 0.00001,
     mg: 0.000001,
   },
+  suhu: {
+    celsius: "celsius",
+    fahrenheit: "fahrenheit",
+    kelvin: "kelvin",
+    reamur: "reamur",
+  },
 };
 
 export default function KonversiSatuan() {
@@ -51,15 +59,41 @@ export default function KonversiSatuan() {
     setToUnit(units[1] || units[0]);
   };
 
+  const convertTemperature = (val, from, to) => {
+    let celsius;
+    switch (from) {
+      case "celsius": celsius = val; break;
+      case "fahrenheit": celsius = (val - 32) * 5 / 9; break;
+      case "kelvin": celsius = val - 273.15; break;
+      case "reamur": celsius = val * 5 / 4; break;
+      default: return null;
+    }
+
+    switch (to) {
+      case "celsius": return celsius;
+      case "fahrenheit": return celsius * 9 / 5 + 32;
+      case "kelvin": return celsius + 273.15;
+      case "reamur": return celsius * 4 / 5;
+      default: return null;
+    }
+  };
+
   const convert = () => {
+    if (value === "") return null;
     const val = parseFloat(value);
-    if (isNaN(val)) return "Input tidak valid";
+    if (isNaN(val)) return null;
+
+    if (selected === "suhu") {
+      const result = convertTemperature(val, fromUnit, toUnit);
+      if (result === null) return null;
+      return result.toLocaleString("id-ID", { maximumFractionDigits: 3 });
+    }
 
     const fromFactor = unitData[selected][fromUnit];
     const toFactor = unitData[selected][toUnit];
 
     const result = (val * fromFactor) / toFactor;
-    return result.toLocaleString("id-ID", { maximumFractionDigits: 6 });
+    return result.toLocaleString("id-ID", { maximumFractionDigits: 3 });
   };
 
   const resultText = convert();
@@ -90,11 +124,9 @@ export default function KonversiSatuan() {
             <label className="text-sm font-medium text-gray-900 dark:text-gray-200">
               Nilai
             </label>
-            <input
-              type="number"
+            <ShapeInput
               value={value}
-              onChange={(e) => setValue(e.target.value)}
-              className="p-2 border rounded text-gray-900 placeholder:text-gray-500 dark:bg-gray-800 dark:text-gray-100 dark:placeholder:text-gray-400 dark:border-gray-600"
+              onChange={setValue}
               placeholder="Masukkan nilai"
             />
           </div>
@@ -130,11 +162,13 @@ export default function KonversiSatuan() {
               ))}
             </select>
           </div>
-          <div className="mt-4 p-4 bg-gray-100 dark:bg-gray-600 rounded">
-            <p className="text-lg font-semibold text-gray-900 dark:text-gray-100">
-              Hasil: {resultText} {toUnit}
-            </p>
-          </div>
+          {resultText !== null && (
+            <div className="mt-4 p-4 bg-gray-100 dark:bg-gray-600 rounded">
+              <p className="text-lg font-semibold text-gray-900 dark:text-gray-100">
+                Hasil: {resultText} {toUnit}
+              </p>
+            </div>
+          )}
         </div>
       )}
     </div>
